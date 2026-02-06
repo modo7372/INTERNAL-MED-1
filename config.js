@@ -6,7 +6,7 @@
 const ADMIN_IDS = [5814737296];  // Full access including analytics
 const ALLOWED_USER_IDS = [2004826495];     // Access to all features except analytics
 
-const ENABLE_SECURITY = false;
+const ENABLE_SECURITY = true;
 
 // Firebase Configuration - New Project
 const firebaseConfig = {
