@@ -9,7 +9,7 @@ const APP_ID = 'medquiz_v2';  // Change this for each app: 'medquiz_v1', 'medqui
 const ADMIN_IDS = [5814737296];  // Full access including analytics
 const ALLOWED_USER_IDS = [];     // Access to all features except analytics
 
-const ENABLE_SECURITY = true;
+const ENABLE_SECURITY = false;
 
 // Firebase Configuration - New Project
 const firebaseConfig = {
