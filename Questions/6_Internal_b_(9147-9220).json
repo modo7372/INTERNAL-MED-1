@@ -1,0 +1,1267 @@
+{
+  "meta": {
+    "source": "Internal Medicine Database",
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": 9147,
+      "question": "(2 times repeated) - The most important investigation to assess ejection fraction:",
+      "options": [
+        "ECG",
+        "Echocardiography",
+        "MRI heart",
+        "Coronary angiography",
+        "Chest X-ray"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Echocardiography (Option B) is the most widely used and important clinical tool for assessing ejection fraction (EF) due to its availability, non-invasive nature, and ability to provide real-time assessment of wall motion and valvular function. While MRI Heart (Option C) is the gold standard for volume quantification, Echo is the primary first-line investigation. ECG (Option A) assesses electrical activity, not pumping function. Coronary angiography (Option D) visualizes vessels, not contractile function directly.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9148,
+      "question": "Definitive diagnosis in case of Hodgkin lymphoma is made by:",
+      "options": [
+        "Lymph node biopsy",
+        "Blood film",
+        "Bone marrow aspiration",
+        "CBC",
+        "Chest X-ray"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Lymph node biopsy (Option A) is the definitive diagnostic test for Hodgkin Lymphoma as it allows for the histological identification of the characteristic Reed-Sternberg cells. Blood film (Option B) and CBC (Option D) are non-specific. Bone marrow aspiration (Option C) is used for staging, not the primary diagnosis.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Lymphoma/MM/MPDs",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9149,
+      "question": "One of the following is not a marker in pneumonia:",
+      "options": [
+        "Chest X-ray more than one lobe involved",
+        "White cell count (<4 X 10 power 9/L or>20 X 10 power 9/L)",
+        "Blood culture - positive",
+        "Normal albumin",
+        "Other co-morbidities"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Normal albumin (Option D) is not a marker of pneumonia severity or presence. Albumin is a negative acute-phase reactant, so levels typically decrease, not stay normal, during significant infection/inflammation like pneumonia. The other options (A, B, C) are markers of severity often used in scoring systems like CURB-65 or determining prognosis.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Pneumonia",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9150,
+      "question": "Most common organ affected in sarcoidosis is:",
+      "options": [
+        "Skin",
+        "Eye",
+        "Lung",
+        "Liver",
+        "Heart"
+      ],
+      "correct_option_id": 2,
+      "explanation": "The lung (Option C) is involved in over 90% of sarcoidosis cases, typically manifesting as bilateral hilar lymphadenopathy and interstitial lung disease. While sarcoidosis is a multisystem granulomatous disorder affecting skin, eyes, and liver, pulmonary involvement is by far the most frequent.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Interstitial Lung Diseases",
+      "chapter": "Epidemiology & Pathophysiology"
+    },
+    {
+      "id": 9151,
+      "question": "Chest inspection in a case of COPD reveals:",
+      "options": [
+        "Pectus excavatum",
+        "Pectus carinatum",
+        "Normal chest",
+        "Barrel-shaped chest",
+        "Kyphoscoliosis"
+      ],
+      "correct_option_id": 3,
+      "explanation": "A barrel-shaped chest (Option D) is characteristic of COPD (specifically emphysema) due to chronic air trapping and lung hyperinflation, which increases the anteroposterior diameter of the chest. Pectus excavatum and carinatum are congenital deformities.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "COPD",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9152,
+      "question": "One of the following is not a cause of slow-resolving pneumonia:",
+      "options": [
+        "Bronchiectasis",
+        "Tuberculosis",
+        "Adequate antibiotic dose/duration",
+        "Non-adherence",
+        "Lung abscess"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Adequate antibiotic dose and duration (Option C) leads to resolution of pneumonia, not slow resolution. Causes of slow resolution include host factors (immunosuppression), structural issues (Bronchiectasis - Option A), unusual pathogens (TB - Option B), or treatment failure due to non-adherence (Option D).",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Pneumonia",
+      "chapter": "Complications & Prognosis"
+    },
+    {
+      "id": 9153,
+      "question": "Gold standard diagnostic test in pulmonary embolism is:",
+      "options": [
+        "Echocardiography",
+        "CT pulmonary angiography",
+        "ECG",
+        "Chest X-ray",
+        "Arterial blood gases"
+      ],
+      "correct_option_id": 1,
+      "explanation": "CT pulmonary angiography (CTPA) (Option B) is the gold standard and first-line advanced imaging for diagnosing pulmonary embolism due to its high sensitivity and specificity. Echo (Option A) assesses strain but doesn't visualize the clot directly. ECG (Option C) and CXR (Option D) are often non-specific.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Pulmonary Vascular Diseases",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9154,
+      "question": "Which of the following does not produce systemic hypertension:",
+      "options": [
+        "Cushing’s syndrome",
+        "Addison’s disease",
+        "Conn’s syndrome",
+        "Polycystic kidney disease",
+        "Pheochromocytoma"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Addison’s disease (Option B) (primary adrenal insufficiency) leads to a deficiency in cortisol and aldosterone, causing sodium loss and hypotension, not hypertension. Cushing’s (Option A), Conn’s (Option C), and Polycystic kidney disease (Option D) are classic causes of secondary hypertension.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9155,
+      "question": "Non-pharmacological measures in hypertension do not include:",
+      "options": [
+        "Regular exercise",
+        "Weight reduction",
+        "Increase salt intake",
+        "Increase vegetable intake",
+        "Stop smoking"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Increasing salt intake (Option C) worsens hypertension by causing fluid retention. The correct non-pharmacological approach is salt restriction (DASH diet), along with exercise (Option A), weight reduction (Option B), and increased vegetable intake (Option D).",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9156,
+      "question": "Typical anginal pain is not characterized by:",
+      "options": [
+        "Retrosternal pain",
+        "Pressing in character",
+        "Tearing in character",
+        "Increased with exertion",
+        "Relieved by nitrates"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Tearing pain (Option C) is classically associated with aortic dissection, not angina. Typical angina is described as a retrosternal (Option A), pressing/squeezing sensation (Option B) that is precipitated by exertion (Option D) and relieved by rest or nitrates.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Ischemic heart diseases",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9157,
+      "question": "Syncope is best described by which of the following:",
+      "options": [
+        "Prolonged disturbed conscious level",
+        "Central crushing chest pain",
+        "Sudden and transient loss of consciousness due to cerebral hypoperfusion",
+        "Unilateral weakness",
+        "Unsteadiness"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Syncope is defined as a sudden, transient loss of consciousness accompanied by loss of postural tone, followed by spontaneous recovery, caused by global cerebral hypoperfusion (Option C). Prolonged disturbance (Option A) suggests coma or metabolic issues.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9158,
+      "question": "Central cyanosis is not found in:",
+      "options": [
+        "Fallot’s tetralogy",
+        "Transposition of great vessels",
+        "Acute pulmonary edema",
+        "Left-to-right shunt",
+        "Asphyxia"
+      ],
+      "correct_option_id": 3,
+      "explanation": "A simple Left-to-right shunt (Option D) (e.g., ASD, VSD, PDA) is acyanotic because oxygenated blood recirculates through the lungs; systemic flow remains oxygenated. Cyanosis only occurs if the shunt reverses (Eisenmenger syndrome). Tetralogy (Option A) and Transposition (Option B) are cyanotic heart diseases. Pulmonary edema (Option C) causes hypoxia and potential cyanosis.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9159,
+      "question": "Which is false regarding edema in congestive cardiac failure:",
+      "options": [
+        "Unilateral edema",
+        "Starts in dependent part",
+        "Pitting edema",
+        "Sacral edema in non-ambulatory patients",
+        "Bilateral edema"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Edema in congestive heart failure is systemic and therefore bilateral (symmetrical). Unilateral edema (Option A) suggests local causes like DVT or cellulitis. Cardiac edema is pitting (Option C) and gravity-dependent (Option B), appearing in the sacrum of bed-bound patients (Option D).",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9160,
+      "question": "Common viral cause of myocarditis:",
+      "options": [
+        "Staphylococcus aureus",
+        "Coxsackie B virus",
+        "Candida albicans",
+        "Mycobacterium tuberculosis",
+        "Mycoplasma"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Coxsackie B virus (Option B) is the most common viral etiology of myocarditis. Staphylococcus (Option A) is bacterial (endocarditis), Candida (Option C) is fungal, and TB (Option D) is mycobacterial.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9161,
+      "question": "Main symptom of left-sided heart failure:",
+      "options": [
+        "Peripheral edema",
+        "Jugular venous pressure",
+        "Congested liver",
+        "Dyspnea",
+        "Vomiting"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Left-sided heart failure causes backup of pressure into the pulmonary circulation, leading to pulmonary congestion and Dyspnea (Option D). Peripheral edema (Option A), elevated JVP (Option B), and congested liver (Option C) are signs of right-sided heart failure.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9162,
+      "question": "Which of the following drugs may worsen manifestations of heart failure:",
+      "options": [
+        "Loop diuretics",
+        "Potassium-sparing diuretics",
+        "ACE inhibitors",
+        "Digitalis therapy",
+        "Verapamil"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Verapamil (Option D) is a non-dihydropyridine calcium channel blocker with significant negative inotropic effects, which can reduce cardiac contractility and worsen heart failure, especially in patients with reduced ejection fraction. The other options (A, B, C) are standard treatments for heart failure.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9163,
+      "question": "Spirometry in COPD usually reveals:",
+      "options": [
+        "Obstructive lung pattern",
+        "Restrictive lung pattern",
+        "Normal pattern",
+        "Mixed pattern",
+        "Nonspecific changes"
+      ],
+      "correct_option_id": 0,
+      "explanation": "COPD is characterized by an Obstructive lung pattern (Option A), defined by a reduced FEV1/FVC ratio (< 0.70). Restrictive patterns (Option B) are seen in fibrosis.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "COPD",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9164,
+      "question": "Which of the following is not a cause of bilateral hilar lymphadenopathy:",
+      "options": [
+        "Sarcoidosis",
+        "Pneumonia",
+        "Lymphoma",
+        "Pulmonary tuberculosis",
+        "Bronchial carcinoma"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Pneumonia (Option B) typically presents with lobar consolidation and does not usually cause bilateral hilar lymphadenopathy (BHL). BHL is a classic sign of Sarcoidosis (Option A) and can also be seen in Lymphoma (Option C) and Tuberculosis (Option D), though TB is often unilateral.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Interstitial Lung Diseases",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9165,
+      "question": "Which of the following is an alarming symptom in GERD:",
+      "options": [
+        "Melena",
+        "Heartburn",
+        "Water brash",
+        "Regurgitation",
+        "Gingivitis"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Melena (Option A) indicates upper gastrointestinal bleeding, which is a 'red flag' or alarm symptom requiring urgent investigation (endoscopy). Heartburn (Option B), water brash (Option C), and regurgitation (Option D) are typical, uncomplicated symptoms of GERD.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "GERD",
+      "chapter": "Complications"
+    },
+    {
+      "id": 9166,
+      "question": "Most common associated symptom with malabsorption syndromes:",
+      "options": [
+        "Hematemesis",
+        "Steatorrhea",
+        "Dysphagia",
+        "Heartburn",
+        "Melena"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Steatorrhea (Option B) (bulky, foul-smelling, fatty stools) is the hallmark symptom of malabsorption, resulting from the failure to digest and absorb fats. Hematemesis (Option A) suggests bleeding; Dysphagia (Option C) suggests motility/obstruction issues.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Malabsorption",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9167,
+      "question": "Common complication of GERD:",
+      "options": [
+        "Peptic ulcer",
+        "Crohn’s disease",
+        "Diverticulitis",
+        "Barrett’s esophagus",
+        "Ulcerative colitis"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Barrett’s esophagus (Option D) is a complication of chronic GERD where the normal stratified squamous epithelium of the esophagus is replaced by columnar epithelium (metaplasia), predisposing to adenocarcinoma. Crohn's (Option B) and Diverticulitis (Option C) are bowel diseases.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "GERD",
+      "chapter": "Complications"
+    },
+    {
+      "id": 9168,
+      "question": "Hallmark symptom of irritable bowel syndrome:",
+      "options": [
+        "Blood in stool",
+        "Unintentional weight loss",
+        "Abdominal pain relieved by defecation",
+        "Steatorrhea",
+        "Vomiting"
+      ],
+      "correct_option_id": 2,
+      "explanation": "The diagnostic criteria for IBS (Rome IV) center on recurrent abdominal pain related to defecation (Option C) (either relieved by it or associated with a change in stool frequency/form). Blood (Option A), weight loss (Option B), and Steatorrhea (Option D) are red flags for organic disease, not IBS.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "IBD & IBS",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9169,
+      "question": "Etiology of liver cirrhosis does not include:",
+      "options": [
+        "Chronic viral hepatitis (B, C)",
+        "Hemochromatosis",
+        "Non-alcoholic fatty liver disease",
+        "Alpha-1-antitrypsin deficiency",
+        "Acute viral hepatitis (A)"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Acute viral hepatitis A (Option D) is a self-limiting infection that does not cause chronic liver disease or cirrhosis. Cirrhosis results from chronic damage such as Chronic Hepatitis B/C (Option A), Hemochromatosis (Option B), or NAFLD (Option C).",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Liver cirrhosis",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9170,
+      "question": "Common cause of upper gastrointestinal tract bleeding is:",
+      "options": [
+        "Erosive esophagitis",
+        "Mallory-Weiss tear",
+        "Vascular malformation",
+        "Esophageal varices",
+        "Gastric carcinoma"
+      ],
+      "correct_option_id": 3,
+      "explanation": "In the context of liver pathology (often implied in this curriculum group), Esophageal varices (Option D) are a massive and common cause of UGI bleeding due to portal hypertension. Note: While Peptic Ulcer Disease is the most common cause globally, Varices are the specific answer in the context of liver disease/portal hypertension.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Portal hypertension",
+      "chapter": "Complications"
+    },
+    {
+      "id": 9171,
+      "question": "Characteristic pathological finding of sarcoidosis is:",
+      "options": [
+        "Fatty degeneration",
+        "Hamartoma",
+        "Metaplasia",
+        "Non-caseating granuloma",
+        "Caseating granuloma"
+      ],
+      "correct_option_id": 3,
+      "explanation": "The hallmark of sarcoidosis is the presence of non-caseating granulomas (Option D) (granulomas without central necrosis) in affected tissues. Caseating granulomas (Option E) are characteristic of Tuberculosis.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Interstitial Lung Diseases",
+      "chapter": "Pathology"
+    },
+    {
+      "id": 9172,
+      "question": "Most common infectious agent in community-acquired pneumonia is:",
+      "options": [
+        "Streptococcus pneumoniae",
+        "Staphylococcus aureus",
+        "Cryptosporidium",
+        "Pseudomonas aeruginosa",
+        "Chlamydia psittaci"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Streptococcus pneumoniae (Option A) (Pneumococcus) is the most common bacterial cause of community-acquired pneumonia worldwide. Pseudomonas (Option D) and Staph (Option B) are more common in hospital-acquired or specific risk groups.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Pneumonia",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9173,
+      "question": "Male patient 17 years old without past medical history, presented with malaise, anorexia, fever, followed by nausea, vomiting, abdominal discomfort and development of jaundice with dark urine and pale stool, the most likely diagnosis is:",
+      "options": [
+        "Peptic ulcer disease",
+        "Gastroenteritis",
+        "Viral hepatitis A",
+        "Myocarditis",
+        "Bacterial pneumonia"
+      ],
+      "correct_option_id": 2,
+      "explanation": "The clinical presentation of a young patient with a prodrome of flu-like symptoms (malaise, fever) followed by signs of cholestasis (jaundice, dark urine, pale stool) is classic for acute Viral Hepatitis A (Option C), which is transmitted via the fecal-oral route. Peptic ulcer (Option A) causes pain, not jaundice. Gastroenteritis (Option B) typically presents with diarrhea.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Viral hepatitis",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9174,
+      "question": "Color of urine is normal in jaundice caused by:",
+      "options": [
+        "Gilbert’s syndrome",
+        "Cancer head of pancreas",
+        "Stone in common bile duct",
+        "Acute hepatitis",
+        "Cholestasis of pregnancy"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Gilbert’s syndrome (Option A) causes unconjugated hyperbilirubinemia. Unconjugated bilirubin is not water-soluble and cannot be filtered by the kidneys, so the urine color remains normal (acholuric jaundice). Other options (B, C, D) cause conjugated hyperbilirubinemia, where water-soluble bilirubin darkens the urine.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Jaundice",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9175,
+      "question": "Which of the following is not a feature of beta-thalassemia major:",
+      "options": [
+        "Splenomegaly",
+        "Iron deficiency",
+        "Pigment gallstones",
+        "Hemolytic jaundice",
+        "Target cells in blood film"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Iron deficiency (Option B) is NOT a feature of Thalassemia Major; conversely, these patients suffer from Iron Overload (hemosiderosis) due to chronic hemolysis and repeated blood transfusions. Splenomegaly (Option A), gallstones (Option C), and jaundice (Option D) are consequences of the chronic hemolytic process.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Microcytic anemia",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9176,
+      "question": "One of the following is not a cause of microcytic anemia:",
+      "options": [
+        "Iron deficiency",
+        "Thalassemia",
+        "Sideroblastic anemia",
+        "Acute hemolysis",
+        "Anemia of chronic disease"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Acute hemolysis (Option D) typically results in a normocytic anemia (or macrocytic if reticulocytosis is very high). Microcytic anemia is caused by defects in hemoglobin synthesis, seen in Iron deficiency (Option A), Thalassemia (Option B), Sideroblastic anemia (Option C), and Anemia of Chronic Disease.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Microcytic anemia",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9177,
+      "question": "Reed-Sternberg cells are characteristic of:",
+      "options": [
+        "Hodgkin lymphoma",
+        "Leukemia",
+        "Multiple myeloma",
+        "Spherocytosis",
+        " Sickle cell anemia"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Reed-Sternberg cells (large, multinucleated giant cells) are the pathognomonic histological finding in Hodgkin lymphoma (Option A). They are not seen in leukemia (Option B) or myeloma (Option C).",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Lymphoma/MM/MPDs",
+      "chapter": "Pathology"
+    },
+    {
+      "id": 9178,
+      "question": "Acute lymphoblastic leukemia is more common in:",
+      "options": [
+        "Adults",
+        "Children",
+        "Old age",
+        "Middle age",
+        "Females"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Acute Lymphoblastic Leukemia (ALL) is the most common cancer in Children (Option B), with a peak incidence between ages 2 and 5. AML and CLL are more common in adults/elderly.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Leukemia",
+      "chapter": "Epidemiology"
+    },
+    {
+      "id": 9179,
+      "question": "Which sign is more typical to left-sided heart failure than right-sided:",
+      "options": [
+        "Ankle oedema",
+        "Ascites",
+        "Hepatomegaly",
+        "Pulmonary rales",
+        "Jugular venous distention"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Pulmonary rales (crackles) (Option D) are caused by fluid accumulation in the alveoli due to elevated left atrial pressure, specific to Left-sided heart failure. Ankle edema (Option A), ascites (Option B), and hepatomegaly (Option C) are classic signs of systemic congestion in Right-sided heart failure.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9180,
+      "question": "Male Patient with known heart failure presents with confusion, poor appetite, nausea and vomiting. He is on digoxin, furosemide and an ACE inhibitor. ECG shows ventricular ectopics and bradycardia. What is likely cause of his current symptoms:",
+      "options": [
+        "Worsening heart failure",
+        "Pulmonary embolism",
+        "Digoxin toxicity",
+        "Hypoglycemia",
+        "Stroke"
+      ],
+      "correct_option_id": 2,
+      "explanation": "The constellation of gastrointestinal symptoms (anorexia, nausea, vomiting), neurological symptoms (confusion), and cardiac arrhythmias (ectopics, bradycardia) in a patient taking Digoxin is classic for Digoxin toxicity (Option C). Hypokalemia from furosemide can precipitate this toxicity.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Complications"
+    },
+    {
+      "id": 9181,
+      "question": "Which of the following cause high cardiac output failure:",
+      "options": [
+        "Thyrotoxicosis",
+        "Coronary artery disease",
+        "Mitral valve disease",
+        "Cor-pulmonale",
+        "Familial dilated cardiomyopathy"
+      ],
+      "correct_option_id": 0,
+      "explanation": "High cardiac output failure occurs when the heart pumps more than normal but cannot meet the body's excessive metabolic needs. Thyrotoxicosis (Option A), anemia, and AV fistulas are causes. CAD (Option B), Valve disease (Option C), and Cor-pulmonale (Option D) typically cause low output failure.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9182,
+      "question": "Which of the following features most strongly suggests an anginal origin of central chest pain:",
+      "options": [
+        "Sharp stabbing pain worse with inspiration",
+        "Pain relived by antacids",
+        "Pain precipitated by exertion and relived by rest",
+        "Localized tenderness over the sternum",
+        "Pain lasts for seconds"
+      ],
+      "correct_option_id": 2,
+      "explanation": "The classic definition of stable angina is chest discomfort that is precipitated by exertion or emotional stress and relieved by rest or nitrates (Option C). Stabbing/inspiratory pain (Option A) suggests pleurisy; tenderness (Option D) suggests costochondritis.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Ischemic heart diseases",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9183,
+      "question": "Central chest pain with sudden onset, dyspnea and hemoptysis is most suggestive of:",
+      "options": [
+        "Stable angina",
+        "Gastroesophageal reflux",
+        "Aortic stenosis",
+        "Pulmonary embolism",
+        "Acute pancreatitis"
+      ],
+      "correct_option_id": 3,
+      "explanation": "The triad of sudden chest pain, dyspnea, and hemoptysis is highly suggestive of Pulmonary Embolism (Option D) (pulmonary infarction). Angina (Option A) is exertional; GERD (Option B) is burning; Aortic stenosis (Option C) presents with syncope/angina/dyspnea but not hemoptysis typically.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Pulmonary Vascular Diseases",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9184,
+      "question": "Which of the following classes of antihypertensive drugs is most appropriate in a diabetic patient with proteinuria:",
+      "options": [
+        "Beta blockers",
+        "Angiotensin converting enzyme inhibitors",
+        "Alpha blockers",
+        "Calcium channel blockers",
+        "Thiazide diuretics"
+      ],
+      "correct_option_id": 1,
+      "explanation": "ACE inhibitors (Option B) are the drug of choice for diabetic patients with proteinuria/nephropathy because they reduce intraglomerular pressure and slow the progression of kidney disease (renoprotective effect), in addition to lowering blood pressure.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9185,
+      "question": "A 24 years old woman presents with fever, dry cough, bilateral symmetrical lymphadenopathy, erythema nodosum and polyarthritis. What is most likely diagnosis:",
+      "options": [
+        "Lofgren's syndrome",
+        "Pulmonary tuberculosis",
+        "Bronchogenic carcinoma",
+        "Chronic bronchitis",
+        "Pneumonia"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Lofgren's syndrome (Option A) is a specific acute clinical presentation of Sarcoidosis characterized by the triad of Erythema Nodosum, Bilateral Hilar Lymphadenopathy, and Polyarthritis/Arthralgia. It has a good prognosis.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Interstitial Lung Diseases",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9186,
+      "question": "Which of the following laboratory abnormalities commonly seen in sarcoidosis:",
+      "options": [
+        "Low serum calcium",
+        "Elevated angiotensin converting enzyme",
+        "Low ESR",
+        "Hyperkalemia",
+        " Decreased serum creatinine"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Sarcoid granulomas produce Angiotensin Converting Enzyme (ACE), leading to Elevated ACE levels (Option B) in the serum, which is used as a marker for disease activity. Hypercalcemia (not low calcium) occurs due to Vitamin D activation by macrophages.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Interstitial Lung Diseases",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9187,
+      "question": "First line therapy for treatment of symptomatic pulmonary sarcoidosis:",
+      "options": [
+        "Methotrexate",
+        "Azathioprine",
+        "Inhaled bronchodilator",
+        "Surgical resection",
+        "Corticosteroids"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Systemic Corticosteroids (Option E) (e.g., Prednisolone) are the first-line treatment for symptomatic or progressive pulmonary sarcoidosis to suppress inflammation and granuloma formation. Methotrexate is second-line.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Interstitial Lung Diseases",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9188,
+      "question": "As regard Legionnaire's pneumonia which statement is true:",
+      "options": [
+        "Causes more severe disease with early intensive care",
+        "Neurological symptoms infrequently seen",
+        "Elevated creatine kinase is not present",
+        "Usually acquired by inhaling bacteria droplets",
+        "Elevated liver enzymes not present"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Legionella pneumophila is transmitted via inhalation of aerosolized water droplets (Option D) from contaminated sources (AC units, cooling towers). It is NOT transmitted person-to-person. It often causes severe disease with extrapulmonary features like confusion (neuro) and elevated CK.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Pneumonia",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9189,
+      "question": "Rust-colored sputum is classically associated with pneumonia caused by:",
+      "options": [
+        "Klebsiella pneumoniae",
+        "Mycoplasma pneumoniae",
+        "Streptococcus pneumoniae",
+        "Pseudomonas aeruginosa",
+        "Haemophilus influenza"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Rust-colored sputum (Option C) is the classic description of sputum in Streptococcus pneumoniae (Pneumococcal) pneumonia, resulting from the presence of altered blood mixed with purulent sputum. Klebsiella is associated with 'red currant jelly' sputum.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Pneumonia",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9190,
+      "question": "Which of the following clinical signs is most specific for lobar pneumonia:",
+      "options": [
+        "Wheezing",
+        "Dullness to percussion",
+        "Decreased breath sounds throughout both lungs",
+        "Bronchial breath sounds over affected area",
+        "Fine inspiratory crackles"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Bronchial breath sounds (Option D) heard over the lung periphery are a specific sign of consolidation (as in lobar pneumonia), where the solid lung transmits sound from the bronchi more effectively. Wheezing (Option A) suggests airway narrowing (Asthma/COPD).",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Pneumonia",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9191,
+      "question": "Which of the following is the surest sign of upper motor neuron (pyramidal) lesion:",
+      "options": [
+        "Unsteady gait",
+        "Organic clonus",
+        "Facial tenderness",
+        "Hemihyposthesia",
+        "Fasciculations"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Organic clonus (Option B) (sustained rhythmic contractions) is a reliable and specific sign of an Upper Motor Neuron (UMN) lesion, indicating hyperreflexia and loss of inhibitory control. Other signs include spasticity, hypertonia, and the Babinski sign.",
+      "term": "Internal Medicine",
+      "subject": "Neurology",
+      "lesson": "Motor System Disorders",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9192,
+      "question": "Which of the following best describes COPD:",
+      "options": [
+        "Reversible airflow limitation",
+        "Persistent airflow limitation that is not fully reversible",
+        "Acute inflammation of bronchi and alveoli",
+        "Chronic infection of the alveoli",
+        "Sudden constriction of the airways after allergen exposure"
+      ],
+      "correct_option_id": 1,
+      "explanation": "COPD is defined by the GOLD guidelines as a disease characterized by persistent respiratory symptoms and airflow limitation that is not fully reversible (Option B). Asthma is characterized by reversible airflow limitation (Option A).",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "COPD",
+      "chapter": "Definition & Pathophysiology"
+    },
+    {
+      "id": 9193,
+      "question": "On auscultation of a patient with COPD, which of the following is most commonly heard:",
+      "options": [
+        "Expiratory wheezes and reduced breath sounds",
+        "Fine crackles at the bases",
+        "Bronchial breath sounds",
+        "Pericardial rub",
+        "Pleural rub"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Common findings in COPD include reduced breath sounds (due to hyperinflation and poor air movement) and expiratory wheezes (Option A) (due to airway obstruction). Fine crackles (Option B) are typical of fibrosis; Bronchial breathing (Option C) of consolidation.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "COPD",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9194,
+      "question": "A red flag symptom in a patient with irritable bowel syndrome is:",
+      "options": [
+        "Mild bloating after meals",
+        "Alternating bowel habits",
+        "Onset in adolescence",
+        "Unexplained weight loss",
+        "Stress-related symptom worsening"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Unexplained weight loss (Option D) is a 'red flag' or alarm symptom that suggests organic pathology (cancer, IBD, malabsorption) rather than a functional disorder like IBS. The other options are consistent with typical IBS presentations.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "IBD & IBS",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9195,
+      "question": "Irritable bowel syndrome is best described:",
+      "options": [
+        "Structural bowel disease",
+        "Infectious colitis",
+        "Functional gastrointestinal disorder",
+        "Malabsorption syndrome",
+        "Inflammatory bowel disease"
+      ],
+      "correct_option_id": 2,
+      "explanation": "IBS is classified as a Functional Gastrointestinal Disorder (Option C) (disorder of Gut-Brain interaction), meaning there are symptoms without detectable structural or biochemical abnormalities.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "IBD & IBS",
+      "chapter": "Definition"
+    },
+    {
+      "id": 9196,
+      "question": "In chronic liver disease, portal hypertension not leads to which of the following:",
+      "options": [
+        "Esophageal varices",
+        "Hemorrhoids",
+        "Splenomegaly",
+        "Caput medusae",
+        "Renal calculi"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Portal hypertension causes portosystemic shunts (Varices - A, Hemorrhoids - B, Caput medusae - D) and congestive Splenomegaly (Option C). It does NOT cause Renal calculi (Option E).",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Portal hypertension",
+      "chapter": "Complications"
+    },
+    {
+      "id": 9197,
+      "question": "50 years old male presents with jaundice, itching, pale stool and dark urine. Liver function tests show elevated conjugated bilirubin and alkaline phosphatase. What is most likely diagnosis:",
+      "options": [
+        "Hemolytic anaemia",
+        "Viral hepatitis",
+        "Acute pancreatitis",
+        "Obstructive jaundice",
+        "Crigler-Najjar syndrome"
+      ],
+      "correct_option_id": 3,
+      "explanation": "The clinical picture of jaundice with pruritus (itching), pale stools, dark urine (cholestatic jaundice), combined with elevated Conjugated Bilirubin and Alkaline Phosphatase, is diagnostic of Obstructive Jaundice (Option D) (Cholestasis). Hemolytic anemia causes unconjugated hyperbilirubinemia.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Jaundice",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9198,
+      "question": "Malabsorption syndrome may be caused by:",
+      "options": [
+        "Parkinson's disease",
+        "Celiac disease",
+        "Thalassemia",
+        "Refsum's disease",
+        "Pneumonia"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Celiac disease (Option B) is a classic cause of malabsorption due to immune-mediated damage to the small intestinal villi upon exposure to gluten. Parkinson's (Option A) is neurological; Thalassemia (Option C) is hematological.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Malabsorption",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9199,
+      "question": "Which of the following is the most common cause of iron deficiency anaemia worldwide:",
+      "options": [
+        "Chronic renal failure",
+        "Hemolytic anaemia",
+        "Acute blood loss",
+        "Chronic blood loss",
+        "Vitamin B12 deficiency",
+        "Vitamin B12 deficiency"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Chronic blood loss (Option D) (e.g., from menstruation in females or hookworm infestation/GI bleeding globally) is the single most common cause of Iron Deficiency Anemia. Acute blood loss causes normocytic anemia initially.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Microcytic anemia",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9200,
+      "question": "A classical clinical sign of iron deficiency anaemia is:",
+      "options": [
+        "Splenomegaly",
+        "Jaundice",
+        "Spoon shaped nail",
+        "Peripheral oedema",
+        "Dark urine"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Spoon-shaped nails (Koilonychia) (Option C) are a specific sign of chronic, severe iron deficiency anemia. Jaundice (Option B) suggests hemolysis. Splenomegaly (Option A) is rare in simple iron deficiency.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Microcytic anemia",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9201,
+      "question": "Which of the following cause transient hemiplegia:",
+      "options": [
+        "Motor neuron disease",
+        "Todd's paralysis",
+        "Thrombotic hemiplegia",
+        "Subacute combined degeneration",
+        "Embolic hemiplegia"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Todd's paralysis (Option B) is a transient weakness or hemiplegia that occurs after a seizure (post-ictal) and resolves spontaneously within hours. Thrombotic hemiplegia (Option C) is typically permanent (stroke).",
+      "term": "Internal Medicine",
+      "subject": "Neurology",
+      "lesson": "Cerebrovascular Diseases",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9202,
+      "question": "Which of the following is typical clinical presentation of lymphoma:",
+      "options": [
+        "Painless lymphadenopathy",
+        "Rapid onset hemiplegia",
+        "Chronic cough",
+        "Hematemesis",
+        "Ecchymosis"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Painless lymphadenopathy (Option A) (enlarged lymph nodes that are not tender) is the most common presenting sign of both Hodgkin and Non-Hodgkin Lymphoma. Painful nodes usually suggest infection.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Lymphoma/MM/MPDs",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9203,
+      "question": "Dullness of the Kronig isthmus is usually not seen in:",
+      "options": [
+        "Bronchiectasis",
+        "Apical lung fibrosis",
+        "Apical pneumonia",
+        "Post primary pulmonary TB",
+        "Pancost lung tumour"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Kronig's isthmus is the band of resonance over the lung apex. Dullness here implies apical pathology (TB, Pancoast tumor, apical fibrosis). Bronchiectasis (Option A) predominantly affects the lower lobes (basal) and does not typically cause apical dullness.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Bronchiectasis",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9204,
+      "question": "Which of the following investigations is most definitive for diagnosing lymphoma:",
+      "options": [
+        "CBC",
+        "ESR",
+        "Lymph node biopsy",
+        "Chest x-ray",
+        "Bone marrow aspiration"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Lymph node biopsy (Option C) (excisional biopsy) is the definitive test as it provides the tissue architecture necessary to distinguish lymphoma subtypes. CBC and ESR are non-specific.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Lymphoma/MM/MPDs",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9205,
+      "question": "Haemoptysis is not common in:",
+      "options": [
+        "Bronchiectasis",
+        "ANCA-associated vasculitis",
+        "Bronchogenic carcinoma",
+        "Bronchial asthma",
+        "Pulmonary tuberculosis"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Haemoptysis is not a common feature of uncomplicated Bronchial Asthma (Option D). It is common in Bronchiectasis (Option A), Carcinoma (Option C), and Vasculitis (Option B). If an asthmatic coughs blood, alternative diagnoses (e.g., ABPA, Churg-Strauss) should be sought.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Bronchial Asthma",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9206,
+      "question": "Which of the following is the hallmark laboratory finding in Hemolytic anaemia:",
+      "options": [
+        "Low MCV",
+        "Elevated reticulocytic count",
+        "Low serum iron",
+        "Decreased LDH",
+        "Low bilirubin"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Elevated reticulocytic count (Option B) is the hallmark of hemolytic anemia, indicating the bone marrow's regenerative response to premature red cell destruction. Low MCV (Option A) is for iron deficiency; LDH is increased (not decreased) in hemolysis.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Hemolytic anemias",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9207,
+      "question": "65 years old male, hypertensive presented to ER by severe tearing central chest pain referred to the back, on examination there was unequal pulse volume. What is the most appropriate diagnosis?",
+      "options": [
+        "Myocardial infarction",
+        "Aortic dissecting aneurysm",
+        "Bacterial pneumonia",
+        "Pleuritic chest pain",
+        "Cardiomegaly"
+      ],
+      "correct_option_id": 1,
+      "explanation": "The description of severe 'tearing' chest pain radiating to the back, coupled with 'unequal pulse volume' (due to occlusion of subclavian/brachiocephalic vessels), is classic for Aortic Dissection (Option B). MI usually presents with pressure/squeezing.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Ischemic heart diseases",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9208,
+      "question": "Patient with celiac disease, main treatment is:",
+      "options": [
+        "Carbohydrate free diet",
+        "Protein free diet",
+        "Gluten free diet",
+        "Antiacids",
+        "Antibiotics"
+      ],
+      "correct_option_id": 2,
+      "explanation": "The cornerstone of treatment for Celiac disease is a strict, lifelong Gluten-free diet (Option C) (avoiding wheat, barley, rye). This allows the intestinal mucosa to heal and symptoms to resolve.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Malabsorption",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9209,
+      "question": "Which of the following is typical presentation of leukaemia:",
+      "options": [
+        "Hypertension and haematuria",
+        "Abdominal pain and jaundice",
+        "Headache and vomiting",
+        "Bone pain, pallor and petechiae",
+        "Cough and haemoptysis"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Leukemia presents with signs of bone marrow failure: Pallor (anemia), Petechiae/Bleeding (thrombocytopenia), and infection. Bone pain (Option D) is also common due to marrow expansion. This triad is the classic presentation.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Leukemia",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9210,
+      "question": "One of the following conditions is a risk factor for systemic hypertension:",
+      "options": [
+        "Obesity",
+        "Low salt intake",
+        "High intake of vegetables",
+        "Good sleep",
+        "Regular physical exercise"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Obesity (Option A) is a major established risk factor for the development of systemic hypertension. The other options (B, C, D) are protective or lifestyle measures used to manage hypertension.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9211,
+      "question": "Which is not a complication of hepatic cirrhosis:",
+      "options": [
+        "Spontaneous bacterial peritonitis",
+        "Hepatocellular carcinoma",
+        "Thrombocytosis",
+        "Portal hypertension",
+        "Portal vein thrombosis"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Thrombocytosis (Option C) (high platelets) is not a complication of cirrhosis; in fact, Thrombocytopenia (low platelets) is the expected finding due to hypersplenism and reduced thrombopoietin production by the liver. SBP (Option A), HCC (Option B), and Portal HTN (Option D) are classic complications.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Liver cirrhosis",
+      "chapter": "Complications"
+    },
+    {
+      "id": 9212,
+      "question": "Which of the following cause microcytic anaemia:",
+      "options": [
+        "Aplastic anaemia",
+        "Vitamin B12 deficiency",
+        "Folic acid deficiency",
+        "Hemolytic anaemia",
+        "Sideroblastic anaemia"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Sideroblastic anemia (Option E) causes microcytic anemia due to defective heme synthesis. B12 and Folate deficiency (Options B, C) cause Macrocytic anemia. Aplastic anemia (Option A) is typically normocytic.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Microcytic anemia",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9213,
+      "question": "Which of the following is not associated with splenomegaly?",
+      "options": [
+        "Portal hypertension",
+        "Chronic myeloid leukemia",
+        "Hereditary spherocytosis",
+        "Sickle cell anemia",
+        "Thalassemia major"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Sickle cell causes auto-splenectomy (shrinkage) in adults.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Hemolytic anemias",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9214,
+      "question": "Which of the following is not true regarding Hypertrophic Obstructive Cardiomyopathy (HOCM):",
+      "options": [
+        " Manifest by exertional syncope",
+        "May be presented by sudden cardiac death",
+        "Characterized by increased septal thickness and systolic motion of anterior mitral leaflet",
+        "Complicated by arrhythmias which may require implantable cardioverter",
+        "Digitalis therapy is essential and beta blockers are contraindicated"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Beta-agonists (like adrenaline/dopamine) increase contractility, which worsens the dynamic outflow obstruction in HOCM. Beta-blockers are the treatment of choice.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9215,
+      "question": "GERD complications do not include:",
+      "options": [
+        "Dehydration",
+        "Stricture",
+        "Barrett’s esophagus",
+        "Adenocarcinoma",
+        "Laryngitis"
+      ],
+      "correct_option_id": 0,
+      "explanation": "GERD is characterized by regurgitation, which is an effortless backflow of gastric contents into the esophagus or throat. True vomiting is forceful and uncommon in GERD, and its presence usually suggests another condition or more severe pathology. GERD complications such as esophageal strictures, Barrett’s esophagus, and adenocarcinoma are localized structural or cellular injuries caused by chronic acid exposure. Dehydration, however, is a systemic condition resulting from significant fluid loss and is not a direct or typical complication of GERD, as vomiting in GERD is usually infrequent and insufficient in volume to cause dehydration.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "GERD",
+      "chapter": "Complications"
+    },
+    {
+      "id": 9216,
+      "question": "Pregnancy-associated hypertension should not be treated with:",
+      "options": [
+        "Hydralazine",
+        "Enalapril",
+        "Nifedipine",
+        "Methyldopa",
+        "Labetalol"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Enalapril is an ACE inhibitor and is strictly contraindicated during pregnancy, especially in the second and third trimesters. ACE inhibitors disrupt the fetal renin–angiotensin system, which is essential for normal renal development. This can result in ACE inhibitor fetopathy, including renal dysgenesis or anuria, oligohydramnios (leading to pulmonary hypoplasia and limb deformities), skull ossification defects (hypocalvaria), and fetal death. In contrast, antihypertensive drugs considered safe in pregnancy include methyldopa, labetalol, and nifedipine. Hydralazine is mainly reserved for acute hypertensive emergencies. Therefore, Enalapril should not be used in pregnancy.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9217,
+      "question": "Features of sickle cell anemia don’t include:",
+      "options": [
+        " Leg ulcers",
+        "Hypersplenism",
+        "Priapism",
+        "Retinal infarction",
+        "Nocturia"
+      ],
+      "correct_option_id": 1,
+      "explanation": "In sickle cell anemia (HbSS), the characteristic splenic finding in adulthood is autosplenectomy rather than hypersplenism. Although the spleen may be enlarged in early childhood, repeated vaso-occlusive micro-infarctions lead to progressive fibrosis, shrinkage, and loss of splenic function. Hypersplenism is therefore not a typical feature of HbSS in adults and is more commonly seen in other hemoglobinopathies such as HbSC disease or sickle β-thalassemia, where the spleen remains enlarged. Other listed options are recognized complications of sickle cell disease due to vaso-occlusion or renal concentrating defects.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Hemolytic anemias",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9218,
+      "question": "Right-sided heart failure is not manifested by:",
+      "options": [
+        "Increased JVP",
+        "Tender hepatomegaly",
+        "Ascites",
+        "Bilateral leg edema",
+        "Bilateral basal lung crackles ulcers"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Bilateral basal lung crackles are a characteristic finding of left-sided heart failure, not right-sided heart failure. In left ventricular failure, blood backs up into the left atrium and pulmonary veins, increasing pulmonary capillary pressure and causing pulmonary edema. The presence of fluid within the alveoli produces bilateral basal crackles on auscultation. In isolated right-sided heart failure, congestion occurs in the systemic venous circulation rather than the lungs, so lung fields are typically clear. Features of right-sided heart failure instead include raised JVP, tender hepatomegaly, ascites, and peripheral edema.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9219,
+      "question": "Normal level of bilirubin in blood is:",
+      "options": [
+        "2 mg/dL",
+        "1 mg/dL",
+        "3 mg/dL",
+        "4 mg/dL",
+        "5 mg/dL"
+      ],
+      "correct_option_id": 1,
+      "explanation": "The normal upper limit of total serum bilirubin in healthy adults is approximately 1 mg/dL (normal range ≈ 0.1–1.2 mg/dL). Levels above this are considered elevated: values around 2 mg/dL indicate latent (subclinical) jaundice, while levels ≥ 3 mg/dL are typically associated with clinically visible jaundice, first noticeable in the sclera. Higher levels suggest significant underlying pathology such as hepatic dysfunction, biliary obstruction, or hemolysis.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9220,
+      "question": "Which of the following symptoms is most commonly seen in myocarditis:",
+      "options": [
+        "Productive cough",
+        "Haemoptysis",
+        "Intermittent claudication",
+        "Dyspnea, fatigue and palpitation",
+        "Central chest pain relived by leaning forward"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Myocarditis often presents with non-specific signs of heart failure and inflammation, including Dyspnea, fatigue, and palpitations (Option D). Chest pain relieved by leaning forward (Option E) describes Pericarditis, though myopericarditis can occur.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    }
+  ]
+}

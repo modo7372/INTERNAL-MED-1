@@ -1,0 +1,2503 @@
+{
+  "meta": {
+    "source": "Internal Medicine Database",
+    "version": "1.0"
+  },
+  "questions": [
+    {
+      "id": 9000,
+      "question": "(2 times repeated) - One of the following is a cause of dyspnea of sudden onset:",
+      "options": [
+        "Chronic heart failure",
+        "Pulmonary Embolism",
+        "Interstitial lung fibrosis",
+        "Morbid obesity",
+        "Anaemia"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Pulmonary Embolism (PE) typically presents with the abrupt onset of dyspnea due to sudden occlusion of pulmonary arteries. Chronic heart failure, fibrosis, obesity, and anemia cause gradual or progressive dyspnea.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Pulmonary Embolism",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9001,
+      "question": "(2 times repeated) - The hallmark of aplastic anemia is:",
+      "options": [
+        "Low platelets",
+        "Low RBCs",
+        "Low WBCs",
+        "Pancytopenia",
+        "Increased RBCs"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Pancytopenia (reduction in RBCs, WBCs, and platelets) is the hallmark of aplastic anemia due to bone marrow failure. While individual cell lines are low, the defining feature is the depression of all three.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Aplastic anemia",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9002,
+      "question": "(4 times repeated) - One of the strong and independent risk factors for hypertension is:",
+      "options": [
+        "High dietary intake of potassium",
+        "Obesity and overweight",
+        "High levels of physical exercise",
+        "Low sodium intake",
+        "Excess water intake"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Obesity is a major, independent risk factor for essential hypertension, contributing to increased sympathetic activity and insulin resistance. High potassium, low sodium, and exercise are protective/lifestyle modifications.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9003,
+      "question": "(2 times repeated) - Imaging of the chest in sarcoidosis may reveal:",
+      "options": [
+        "Bilateral hilar lymphadenopathy and parenchymal involvement",
+        "Pneumothorax",
+        "Pneumonia",
+        "Hydropneumothorax",
+        "Lung abscess"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Bilateral hilar lymphadenopathy (BHL) is the classic radiographic finding in Stage I sarcoidosis. Parenchymal involvement appears in Stage II. The other options are not characteristic primary findings of sarcoidosis.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Interstitial Lung Diseases",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9004,
+      "question": "(2 times repeated) - Orthopnea may occur in:",
+      "options": [
+        "Left sided heart failure",
+        "Right sided heart failure",
+        "Pyramidal lesions",
+        "Acute cerebellar lesions",
+        "Epilepsy"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Orthopnea (dyspnea when lying flat) is a specific sign of Left Sided Heart Failure due to the redistribution of blood from the splanchnic circulation and lower extremities to the lungs, increasing pulmonary congestion.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9005,
+      "question": "(2 times repeated) - Which of the following physical signs may indicate left ventricular failure:",
+      "options": [
+        "Pulsus alternans",
+        "Accentuated 1st heart sound",
+        "Elevated systolic blood pressure",
+        "Digital clubbing",
+        "Congested pulsating neck veins"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Pulsus alternans (alternating strong and weak beats) is a specific sign of severe left ventricular failure, reflecting impaired myocardial contractility. Congested neck veins are a sign of Right HF.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9006,
+      "question": "Thrombocytopenia is not present in the following:",
+      "options": [
+        "Iron deficiency",
+        "Bone marrow failure",
+        "Hypersplenism",
+        "Platelet consumptive disorders (e.g., DIC)",
+        "Autoimmune"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Iron deficiency anemia typically presents with normal or elevated platelet counts (reactive thrombocytosis). Thrombocytopenia is characteristic of marrow failure, hypersplenism, and consumption/destruction disorders.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Hemostasis and bleeding",
+      "chapter": "Differential Diagnosis"
+    },
+    {
+      "id": 9007,
+      "question": "(2 times repeated) - Which of the following does not produce continuous murmur:",
+      "options": [
+        "Peripheral pulmonary stenosis",
+        "Ruptured sinus of Valsalva",
+        "Aorto-pulmonary window",
+        "Pulmonary arterio-venous fistula",
+        "Patent ductus arteriosus"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Peripheral pulmonary stenosis produces a systolic murmur, not a continuous one. Continuous murmurs occur when there is a pressure gradient between two chambers/vessels throughout both systole and diastole (e.g., PDA, AV fistula).",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9008,
+      "question": "Decapitated hypertension means:",
+      "options": [
+        "Drop in blood pressure as a consequence of heart failure",
+        "Drop in blood pressure as a consequence of thyrotoxicosis",
+        "Drop in blood pressure as a consequence of hypovolemia",
+        "Drop in blood pressure as a consequence of excess therapy",
+        "Drop in blood pressure as a consequence of salt wasting"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Decapitated hypertension refers to a situation where a previously hypertensive patient develops normal or low blood pressure due to pump failure (Heart Failure), indicating a poor prognosis.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Complications"
+    },
+    {
+      "id": 9009,
+      "question": "(2 times repeated) - One of the following signs may indicate acute severe asthma:",
+      "options": [
+        "Pulsus paradoxus",
+        "Increased intensity of breath sounds",
+        "Hypertension",
+        "Big pulse volume",
+        "Bradypnea"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Pulsus paradoxus (a drop in SBP >10 mmHg during inspiration) is a sign of severe asthma and impending respiratory failure due to extreme intrathoracic pressure swings. Breath sounds are usually decreased (silent chest) in severe cases.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Bronchial Asthma",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9010,
+      "question": "Pathological consequences of hypertension involve the following organs:",
+      "options": [
+        "Heart, brain, kidneys and peripheral arteries",
+        "Stomach, small intestine and pancreas",
+        "Muscles",
+        "Liver and bile ducts",
+        "Peripheral nerves"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Hypertension causes target organ damage primarily in the Heart (LVH, HF), Brain (Stroke), Kidneys (Nephrosclerosis), and Arteries (Atherosclerosis, Retinopathy).",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Complications"
+    },
+    {
+      "id": 9011,
+      "question": "Abdominal pain in a case of irritable bowel syndrome:",
+      "options": [
+        "Radiated to the right shoulder",
+        "Stitching pain",
+        "Increased by bowel movement",
+        "Relieved with defecation",
+        "Decrease with food intake"
+      ],
+      "correct_option_id": 3,
+      "explanation": "A hallmark diagnostic criterion for IBS (Rome criteria) is abdominal pain that is relieved by defecation. It is often exacerbated by food intake, not decreased.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "IBD & IBS",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9012,
+      "question": "(2 times repeated) - Hodgkin disease is characterized mainly by:",
+      "options": [
+        "Presence of Reed-Sternberg cell",
+        "Lymphadenopathy",
+        "Amalgamated lymph nodes",
+        "Leucopenia",
+        "Toxic manifestations"
+      ],
+      "correct_option_id": 0,
+      "explanation": "The presence of Reed-Sternberg cells (binucleated giant cells) in the lymph node biopsy is the pathological hallmark required for the diagnosis of Hodgkin Lymphoma.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Lymphoma/MM/MPDs",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9013,
+      "question": "The following statement is not true as regard GERD:",
+      "options": [
+        "More common in males than females",
+        "More common in elderly",
+        "Not occur in young adults",
+        "Barrett esophagus is more common in males",
+        "Never associated with extra-esophageal symptoms"
+      ],
+      "correct_option_id": 4,
+      "explanation": "GERD is frequently associated with extra-esophageal symptoms such as chronic cough, laryngitis, asthma, and dental erosion. The statement that it is 'never' associated is false.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "GERD",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9014,
+      "question": "(2 times repeated) - Aetiology of liver cirrhosis not include:",
+      "options": [
+        "Chronic viral hepatitis (B, C)",
+        "Hemochromatosis",
+        "Non-alcoholic fatty liver disease",
+        "Alpha-1-antitrypsin deficiency",
+        "Acute viral hepatitis (A)"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Acute Viral Hepatitis A is a self-limiting infection and does not cause chronic liver disease or cirrhosis. Cirrhosis results from chronic insults like Hep B/C, alcohol, or metabolic diseases.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Liver cirrhosis",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9015,
+      "question": "Accelerated atherosclerosis occurs in:",
+      "options": [
+        "Pan-hypopituitarism",
+        "Diabetes mellitus",
+        "Diabetes insipidus",
+        "Thyrotoxicosis",
+        "Anemia"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Diabetes Mellitus is a major risk factor for atherosclerosis due to hyperglycemia, dyslipidemia, and endothelial dysfunction, leading to accelerated vascular disease.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Ischemic heart diseases",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9016,
+      "question": "Pregnancy-associated hypertension should not be treated with: (check 9216 for more)",
+      "options": [
+        "Labetalol",
+        "Telmisartan",
+        "Alpha methyldopa",
+        "Amlodipine",
+        "Hydralazine"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Telmisartan (and other ARBs/ACE inhibitors) are contraindicated in pregnancy due to the risk of fetal renal defects and oligohydramnios. Methyldopa and Labetalol are first-line safe options.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9017,
+      "question": "Which of the following drugs used in HF through increases heart contractility by acting on myosin and decreasing its sliding?",
+      "options": [
+        "Digitalis",
+        "Diuretics",
+        "ACE inhibitors",
+        "Beta blockers",
+        "Calcium channel blockers"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Digitalis (Digoxin) is a positive inotrope that increases contractility by inhibiting the Na+/K+ ATPase, leading to increased intracellular calcium.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9018,
+      "question": "One of the following is not a common finding in sarcoidosis:",
+      "options": [
+        "Fever",
+        "Parotid enlargement",
+        "Lymphadenopathy",
+        "Hepatosplenomegaly",
+        "Renal failure"
+      ],
+      "correct_option_id": 4,
+      "explanation": "While Sarcoidosis can cause hypercalcemia which might affect kidneys, frank renal failure is not a 'common' presentation compared to lymphadenopathy, constitutional symptoms, or hepatosplenomegaly. Parotid enlargement occurs in Heerfordt's syndrome.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Interstitial Lung Diseases",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9019,
+      "question": "Palpable adventitious sounds over the chest wall which disappear after cough may be:",
+      "options": [
+        "Bronchial obstruction by lymph node",
+        "Asthmatic exacerbation",
+        "Bronchial obstruction by secretions",
+        "Pneumothorax",
+        "Bronchial obstruction by tumour"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Rhonchi (palpable as fremitus) caused by secretions in the large airways often clear or change character after coughing. Obstructions by tumors or nodes are fixed and do not clear.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Physical Signs",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9020,
+      "question": "Hemoptysis:",
+      "options": [
+        "Must always be investigated",
+        "Always indicates a benign disease",
+        "Never causes hemodynamic instability",
+        "Vasculitides are the most common aetiology",
+        "Fungal infection is not a cause"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Hemoptysis is a potentially serious symptom that can indicate malignancy, TB, or PE. It must always be investigated to rule out life-threatening causes.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Hemoptysis",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9021,
+      "question": "(2 times repeated) - One of the following is a sign of vasovagal attack:",
+      "options": [
+        "Tachycardia",
+        "Tonic seizure",
+        "Constricted pupil",
+        "Bradycardia",
+        "Epigastric discomfort"
+      ],
+      "correct_option_id": 3,
+      "explanation": "A vasovagal attack (neurocardiogenic syncope) is characterized by paradoxical bradycardia and hypotension (vasodilation) due to increased vagal tone.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9022,
+      "question": "Which of the following is not used in treatment of digitalis toxicity:",
+      "options": [
+        "IV K",
+        "IV calcium",
+        "Stop digitalis",
+        "Digitalis Fab fragment",
+        "Heam perfusion"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Hemoperfusion is ineffective for Digoxin toxicity because the drug has a very large volume of distribution and is tissue-bound. IV Calcium is traditionally avoided/used with caution, but Hemoperfusion is strictly not used.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9023,
+      "question": "(2 times repeated) - A 28-year-old pregnant female presented by placental abruption. Initial investigations revealed prolonged PT and PTT, thrombocytopenia, decreased fibrinogen concentration. The most appropriate diagnosis is:",
+      "options": [
+        "DIC",
+        "Microcytic anemia",
+        "Megaloblastic anemia",
+        "Acute hemolysis",
+        "Severe bone marrow depression"
+      ],
+      "correct_option_id": 0,
+      "explanation": "The clinical picture of placental abruption with coagulopathy (prolonged PT/PTT, low fibrinogen, low platelets) is classic for Disseminated Intravascular Coagulation (DIC), a consumptive coagulopathy.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Hemostasis and bleeding",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9024,
+      "question": "Bovine (non-explosive) cough may indicate:",
+      "options": [
+        "Lower respiratory tract infection",
+        "Upper respiratory tract infection",
+        "Recurrent laryngeal nerve affection",
+        "Pneumonia",
+        "Acute viral infection"
+      ],
+      "correct_option_id": 2,
+      "explanation": "A bovine cough lacks the explosive character of a normal cough due to the inability to close the vocal cords (glottis), which is caused by Recurrent Laryngeal Nerve palsy.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Lung Tumors",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9025,
+      "question": "(2 times repeated) - Differentiation between asthma and COPD may include:",
+      "options": [
+        "Increased FEV1 by 15% following bronchodilators",
+        "Audible rhonchi",
+        "Chronic cough",
+        "Acute attacks of dyspnea",
+        "Diminished air entry"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Asthma is characterized by reversible airway obstruction. Significant reversibility (FEV1 increase >12-15% or >200ml) after bronchodilator administration distinguishes it from COPD, which is largely irreversible.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "COPD",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9026,
+      "question": "Anti-hypertensive drug contraindicated in renal artery stenosis:",
+      "options": [
+        "Losartan",
+        "Verapamil",
+        "Propranolol",
+        "Spironolactone",
+        "Diltiazem"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Losartan (ARB) and ACE inhibitors are contraindicated in bilateral renal artery stenosis (or stenosis in a solitary kidney) because they efferently dilate the glomerulus, dropping GFR and precipitating acute renal failure.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9027,
+      "question": "(2 times repeated) - The typical symptoms of GERD (Gastro-esophageal reflux) include: (check 9215 for more explanation)",
+      "options": [
+        "Regurgitation",
+        "Cough",
+        "Chest pain",
+        "Wheezing",
+        "Syncope"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Regurgitation and heartburn are the two cardinal/typical symptoms of GERD. Cough, chest pain, and wheezing are atypical/extra-esophageal presentations.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "GERD",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9028,
+      "question": "(2 times repeated) - Chest pain caused by diseases of respiratory system usually originates from involvement of:",
+      "options": [
+        "Parietal pleura",
+        "Visceral pleura",
+        "Pulmonary parenchyma",
+        "Bronchial airways",
+        "Baroreceptors"
+      ],
+      "correct_option_id": 0,
+      "explanation": "The lung parenchyma and visceral pleura are insensitive to pain. Respiratory chest pain (pleurisy) arises from irritation of the parietal pleura, which is richly innervated.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Physical Signs",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9029,
+      "question": "(2 times repeated) - Digital clubbing is not a common finding in:",
+      "options": [
+        "Bronchiectasis",
+        "Mesothelioma",
+        "Bronchogenic carcinoma",
+        "Interstitial lung disease",
+        "COPD"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Digital clubbing is typically NOT a feature of COPD alone. If present in a COPD patient, it usually implies a co-existing cause like lung cancer or bronchiectasis.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "COPD",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9030,
+      "question": "Which of the following is not considered as a compensatory mechanism for HF?",
+      "options": [
+        "Stimulation of sympathetic nervous system",
+        "Stimulation of renin angiotensin system",
+        "Hypertrophy of the heart",
+        "Elevated BP",
+        "Increase O₂ extraction"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Elevated BP (increased afterload) is detrimental to a failing heart. The compensatory mechanisms attempt to maintain cardiac output via rate (SNS), volume (RAS), contractility/mass (Hypertrophy), and efficiency (O2 extraction).",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Pathophysiology"
+    },
+    {
+      "id": 9031,
+      "question": "treatment of megaloblastic anemia:",
+      "options": [
+        "Folic acid should be given before Vit B12",
+        "Vit B12 should be given before folic acid",
+        "Given together",
+        "Oral iron should be given at first",
+        "Iron chelating agents are needed"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Vitamin B12 must be administered before or with Folic Acid. Treating B12 deficiency with Folate alone corrects the anemia but allows neurological damage (Subacute Combined Degeneration) to progress.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Macrocytic anemia",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9032,
+      "question": "alarm features in a case of irritable bowel syndrome include:",
+      "options": [
+        "Age less than 30 years",
+        "Regressive abdominal pain",
+        "Family history of irritable bowel syndrome",
+        "Intermittent watery diarrhea",
+        "Unexplained weight loss"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Unexplained weight loss is a 'Red Flag' or alarm feature that excludes simple IBS and necessitates investigation for malignancy, IBD, or malabsorption. Other red flags include rectal bleeding and nocturnal symptoms.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "IBD & IBS",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9033,
+      "question": "(2 times repeated) - One of the following is true about renin:",
+      "options": [
+        "Released from lungs",
+        "Released in response to hypovolemia",
+        "Converts angiotensin I to angiotensin II",
+        "The net effect is to lower blood pressure",
+        "It is a cytokine"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Renin is an enzyme released by the juxtaglomerular cells of the kidney in response to hypovolemia (low renal perfusion). It converts Angiotensinogen to Angiotensin I.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Pathophysiology"
+    },
+    {
+      "id": 9034,
+      "question": "In diagnosis of restrictive cardiomyopathy, which of the following has most relevance?",
+      "options": [
+        "Atrial size",
+        "Left ventricular diastolic dimension",
+        "Left ventricular wall thickness",
+        "Arrhythmia",
+        "Thickness of interventricular septum"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Bi-atrial enlargement is a hallmark of restrictive cardiomyopathy due to high filling pressures and diastolic dysfunction, often while ventricular size remains normal.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9035,
+      "question": "Hemoptysis does not occur in:",
+      "options": [
+        "Left ventricular failure",
+        "Bronchiectasis",
+        "Goodpasture syndrome",
+        "Tight mitral stenosis",
+        "Pulmonary stenosis"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Pulmonary stenosis decreases pulmonary blood flow and does not cause pulmonary congestion or hemorrhage. LVF, Mitral Stenosis, Bronchiectasis, and Goodpasture's all cause bleeding/congestion.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Hemoptysis",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9036,
+      "question": "(2 times repeated) - As regard palpitation, which of the following is not true:",
+      "options": [
+        "Coronary artery disease has a higher risk",
+        "Life-threatening recurrent ventricular arrhythmias require implantable cardioverter device",
+        "Arrhythmias always cause palpitation",
+        "May be accompanied by other symptoms like lightheadedness",
+        "Holter ECG may be required for evaluation"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Arrhythmias do NOT always cause palpitations; many are asymptomatic. Palpitations are the subjective awareness of the heartbeat.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9037,
+      "question": "Autoimmune hemolytic anemia is associated with:",
+      "options": [
+        "Acute lymphoblastic leukemia (ALL)",
+        "Chronic lymphocytic leukemia (CLL)",
+        "Acute myeloid leukemia (AML)",
+        "Chronic myeloid leukemia (CML)",
+        "Paroxysmal nocturnal hemoglobinuria"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Chronic Lymphocytic Leukemia (CLL) is strongly associated with autoimmune phenomena, particularly Warm Autoimmune Hemolytic Anemia (AIHA) and ITP.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Hemolytic anemias",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9038,
+      "question": "Which of the following tests assesses functional states of the liver?",
+      "options": [
+        "Alanine aminotransferase",
+        "Gamma glutamyl transferase",
+        "International normalized ratio (INR)",
+        "Fecal elastase",
+        "5′ nucleotidase"
+      ],
+      "correct_option_id": 2,
+      "explanation": "The INR (Prothrombin Time) measures the liver's synthetic function (production of clotting factors). Enzymes like ALT/GGT indicate injury, not function.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "LFTs",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9039,
+      "question": "(2 times repeated) - One of the clinical manifestations of irritable bowel syndrome (IBS) is:",
+      "options": [
+        "Altered bowel habit",
+        "Fever",
+        "Iron deficiency anemia",
+        "Bloody diarrhea",
+        "Tenesmus"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Altered bowel habits (constipation, diarrhea, or mixed) are the core manifestation of IBS. Fever, anemia, and blood are red flags against the diagnosis.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "IBD & IBS",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9040,
+      "question": "(2 times repeated) - Cardiac involvement is uncommon in which of the following conditions?",
+      "options": [
+        "Duchenne's’muscular dystrophy",
+        "Friedreich's’ataxia",
+        "Myotonic dystrophy",
+        "Ischemic heart disease",
+        "Vitamin D deficiency"
+      ],
+      "correct_option_id": 4,
+      "explanation": "While severe hypocalcemia can affect the heart, Vitamin D deficiency itself is not a primary cause of specific cardiomyopathy compared to Duchenne's, Friedreich's, or Myotonic dystrophy which have well-defined cardiac associations.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9041,
+      "question": "Which of the following is associated with splenomegaly?",
+      "options": [
+        "Chronic renal failure",
+        "Hereditary spherocytosis",
+        "Iron deficiency anemia",
+        "Aplastic anemia",
+        "Sickle cell anemia"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Hereditary Spherocytosis causes extravascular hemolysis in the spleen, leading to splenomegaly. Sickle cell causes auto-splenectomy (shrinkage) in adults.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Hemolytic anemias",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9042,
+      "question": "Drug of choice in Mycoplasma pneumonia is:",
+      "options": [
+        "Penicillin",
+        "Cefuroxime",
+        "Tetracycline",
+        "Erythromycin",
+        "Meropenem"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Mycoplasma pneumoniae lacks a cell wall, making beta-lactams (Penicillin/Cephalosporins) ineffective. Macrolides (Erythromycin) are the drug of choice.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Pneumonia",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9043,
+      "question": "In acute pneumonia, the following is required except:",
+      "options": [
+        "Sputum examination",
+        "Chest x-ray",
+        "Pulmonary function test",
+        "Blood picture",
+        "CRP (C-reactive protein)"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Pulmonary Function Tests (PFTs) are not indicated in acute pneumonia and can be difficult to perform. They are used for chronic conditions like COPD/Asthma.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Pneumonia",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9044,
+      "question": "Which of the following is not a common cause for malabsorption syndrome?",
+      "options": [
+        "Tropical sprue",
+        "Chronic pancreatitis",
+        "Subtotal villous atrophy",
+        "Celiac disease",
+        "Staphylococcal food poisoning"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Staphylococcal food poisoning is an acute, self-limiting toxin-mediated illness causing vomiting/diarrhea, not a chronic malabsorption syndrome.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Malabsorption",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9045,
+      "question": "(3 times repeated) - Which of the following is the surest sign of upper motor neurone (pyramidal) lesion?",
+      "options": [
+        "Unsteady gait",
+        "Organic clonus",
+        "Facial tenderness",
+        "Hemihyposthesia",
+        "Fasciculations"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Organic clonus (sustained rhythmic contractions) is a definitive sign of Upper Motor Neuron (Pyramidal) lesions. Fasciculations are LMN signs.",
+      "term": "Internal Medicine",
+      "subject": "Neurology",
+      "lesson": "Pyramidal Tract Lesions",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9046,
+      "question": "(3 times repeated) - Female patient without known previous past history presented by marked elevation of liver enzymes, prolonged PT, and encephalopathy. The most likely diagnosis is:",
+      "options": [
+        "Fulminant hepatic failure",
+        "Gastroenteritis",
+        "Peptic ulcer disease",
+        "Bacterial pneumonia",
+        "Myocarditis"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Fulminant Hepatic Failure (Acute Liver Failure) is defined by the rapid onset of encephalopathy and coagulopathy (Prolonged PT) in a patient without prior liver disease.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Liver cell failure",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9047,
+      "question": "A patient presented by hemiplegia of sudden onset. The most probable aetiology is:",
+      "options": [
+        "Embolic",
+        "Neoplastic",
+        "Haemorrhagic",
+        "Thrombotic",
+        "Degenerative"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Sudden onset (seconds to minutes) suggests an Embolic event. Thrombosis is usually more gradual (hours/sleep), and neoplasm/degeneration are slow.",
+      "term": "Internal Medicine",
+      "subject": "Neurology",
+      "lesson": "Stroke",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9048,
+      "question": "One of the following is a common skin finding in sarcoidosis:",
+      "options": [
+        "Erythema multiforme",
+        "Acanthosis nigricans",
+        "Psoriasis",
+        "Erythema nodosum",
+        "Vitiligo"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Erythema Nodosum (painful red nodules on shins) is a classic cutaneous manifestation of acute Sarcoidosis (part of Lofgren's syndrome).",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Interstitial Lung Diseases",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9049,
+      "question": "(2 times repeated) - A 52-year-old man is brought to the emergency department with encephalopathy. He was found to have a blood pressure of 240/150. Which of the following drugs can be used?",
+      "options": [
+        "Atenolol",
+        "Verapamil",
+        "Lisinopril",
+        "Reserpine",
+        "Furosemide"
+      ],
+      "correct_option_id": 4,
+      "explanation": "In hypertensive emergencies, potent/rapid agents are needed. Furosemide is effective particularly if there is associated fluid overload/HF. Note: Modern guidelines prefer IV Labetalol or Nitroprusside, but Furosemide is the best option among the list provided compared to oral agents like Atenolol.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9050,
+      "question": "(2 times repeated) - One of the following conditions will not cause secondary hypertension:",
+      "options": [
+        "Sympathomimetic drugs",
+        "Addison’s disease",
+        "Pheochromocytoma",
+        "Aortic coarctation",
+        "Renal artery stenosis"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Addison's disease (Adrenal insufficiency) typically causes Hypotension due to cortisol and aldosterone deficiency (salt wasting). All others are established causes of secondary hypertension.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9051,
+      "question": "Activated partial thromboplastin time (aPTT) will not be prolonged in which of the following conditions:",
+      "options": [
+        "Lupus anticoagulant",
+        "Severe fibrinogen deficiency",
+        "Hemophilia",
+        "Unfractionated heparin therapy",
+        "Thrombocytopenia"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Thrombocytopenia (low platelets) affects primary hemostasis (Bleeding time) but does not prolong coagulation tests like aPTT or PT, which measure clotting factors.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Hemostasis and bleeding",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9052,
+      "question": "(2 times repeated) - The most specific diagnostic test for sarcoidosis is:",
+      "options": [
+        "Trans-bronchial biopsy",
+        "Serum calcium level",
+        "ACE enzyme assay",
+        "Chest X-ray",
+        "Erythema nodosum"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Trans-bronchial biopsy demonstrating non-caseating granulomas is the Gold Standard for definitive diagnosis. ACE and Calcium are supportive but non-specific.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Interstitial Lung Diseases",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9053,
+      "question": "The primary determinant of extracellular fluid volume is:",
+      "options": [
+        "Sodium",
+        "Potassium",
+        "Magnesium",
+        "Glucose"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Sodium is the main cation of the extracellular fluid (ECF) and, due to its osmotic effect, is the primary determinant of ECF volume.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Pathophysiology"
+    },
+    {
+      "id": 9054,
+      "question": "Which of the following is not true regarding Hypertrophic Obstructive Cardiomyopathy (HOCM):",
+      "options": [
+        "β-agonists are useful",
+        "Asymmetrical hypertrophy of septum",
+        "Dynamic left ventricular outflow obstruction",
+        "Condition improves on passive leg raising",
+        "May cause sudden death"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Beta-agonists (like adrenaline/dopamine) increase contractility, which worsens the dynamic outflow obstruction in HOCM. Beta-blockers are the treatment of choice.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9055,
+      "question": "Restrictive lung disease will cause mainly:",
+      "options": [
+        "Reduction in FEV₁",
+        "High FEV₁/FVC ratio",
+        "Low FEV₁/FVC ratio",
+        "Increase in FVC",
+        "Increase in total lung capacity"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Restrictive lung diseases reduce total lung volume (FVC decreases), but FEV1 decreases proportionately less or remains preserved, leading to a Normal or High FEV1/FVC ratio.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Respiratory Failure",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9056,
+      "question": "(3 times repeated) - Cor pulmonale means:",
+      "options": [
+        "Right ventricular failure due to mitral stenosis",
+        "Right ventricular failure due to left ventricular failure",
+        "Right ventricular failure due to lung disease",
+        "Right ventricular failure due to ventricular septal defect",
+        "Left ventricular failure"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Cor Pulmonale is defined as Right Ventricular hypertrophy or failure resulting specifically from diseases affecting the lung structure or function (e.g., COPD, Pulmonary HTN), excluding cardiac causes like Left HF.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9057,
+      "question": "Which of the following does not precipitate manifestations of heart failure?",
+      "options": [
+        "Thyroid disease",
+        "Chest infections",
+        "Diabetes",
+        "Excess IV fluids"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Diabetes is a chronic risk factor, not an acute precipitating factor like infections, thyrotoxicosis/myxedema, or fluid overload which can suddenly decompensate stable HF.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9058,
+      "question": "(2 times repeated) - What is the indication of phosphodiesterase E4 inhibitor in COPD?",
+      "options": [
+        "Heart failure",
+        "Diabetes mellitus",
+        "Chronic bronchitis with history of exacerbation",
+        "Pneumonia",
+        "Bronchiectasis"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Roflumilast (PDE4 inhibitor) is indicated specifically for severe COPD associated with chronic bronchitis and a history of frequent exacerbations to reduce inflammation.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "COPD",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9059,
+      "question": "Left-sided heart failure is manifested by:",
+      "options": [
+        "Raised jugular venous pressure",
+        "Bilateral ankle edema",
+        "Basal lung crackles",
+        "Ascites",
+        "Enlarged tender liver"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Basal lung crackles (Crepitations) are due to pulmonary venous congestion/edema, a direct sign of Left Heart Failure. JVP, edema, ascites, and hepatomegaly are signs of Right HF.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9060,
+      "question": "The best vasodilator used in treatment of chronic heart failure is:",
+      "options": [
+        "Calcium channel blocker",
+        "Na nitroprusside",
+        "ACE inhibitors",
+        "Alpha blockers",
+        "Hydralazine"
+      ],
+      "correct_option_id": 2,
+      "explanation": "ACE inhibitors are the gold standard vasodilators for chronic heart failure as they reduce both preload and afterload and improve survival (mortality benefit).",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9061,
+      "question": "The gold standard in establishing a diagnosis of GERD is:",
+      "options": [
+        "Endoscopy",
+        "Barium swallow",
+        "Plain chest x-ray",
+        "CT chest",
+        "24-hour pH monitoring"
+      ],
+      "correct_option_id": 4,
+      "explanation": "24-hour ambulatory pH monitoring is the Gold Standard for diagnosing GERD, specifically when endoscopy is normal or symptoms are atypical.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "GERD",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9062,
+      "question": "Which of the following is not advocated in the treatment of acute pulmonary edema?",
+      "options": [
+        "Diuretics",
+        "Trendelenburg position",
+        "Rotating tourniquets",
+        "Morphine",
+        "Vasodilators"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Trendelenburg position (head down) increases venous return to the heart, worsening pulmonary congestion. Patients should be sat up (Semi-Fowler's) to reduce preload.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9063,
+      "question": "Which of the following regarding chronic myeloid leukemia (CML) is not true?",
+      "options": [
+        "Associated with huge splenomegaly",
+        "Presence of Philadelphia chromosome",
+        "One of the myeloproliferative disorders",
+        "May progress to blast crisis",
+        "Most common cause of microcytic hypochromic anemia"
+      ],
+      "correct_option_id": 4,
+      "explanation": "CML does not cause microcytic hypochromic anemia (which is typical of Iron deficiency or Thalassemia). CML typically presents with leukocytosis and normocytic anemia.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Leukemia",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9064,
+      "question": "(2 times repeated) - Complications of GERD include which of the following?",
+      "options": [
+        "Barrett's’esophagus",
+        "Esophageal perforation",
+        "Esophageal varices",
+        "Gastric ulceration",
+        "Duodenal ulceration"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Barrett's esophagus (intestinal metaplasia) is a specific complication of chronic GERD and is a precursor to esophageal adenocarcinoma.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "GERD",
+      "chapter": "Complications"
+    },
+    {
+      "id": 9065,
+      "question": "Which is false regarding Reye’s syndrome?",
+      "options": [
+        "Mitochondrial dysfunction of liver",
+        "Salicylates may be responsible",
+        "There may be cerebral edema",
+        "Survivors pass on to chronic liver disease",
+        "May be associated with fulminant hepatic failure"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Survivors of Reye's syndrome typically recover liver function completely without progression to chronic liver disease. It is an acute illness.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Liver cell failure",
+      "chapter": "Prognosis"
+    },
+    {
+      "id": 9066,
+      "question": "Diabetic Peripheral Neuropathy does not include:",
+      "options": [
+        "Postural hypotension",
+        "Quadriceps wasting",
+        "Impotence",
+        "Sensory atonic bladder",
+        "Gastroparesis diabetic"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Quadriceps wasting is characteristic of Diabetic Amyotrophy (a proximal motor neuropathy/radiculoplexopathy), which is distinct from the typical distal symmetric polyneuropathy or autonomic neuropathy listed in the other options.",
+      "term": "Internal Medicine",
+      "subject": "Neurology",
+      "lesson": "Neuropathy",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9067,
+      "question": "The patient's’serum contains only anti-Hepatitis B surface antibody. it is:",
+      "options": [
+        "Acutely infected with Hepatitis B",
+        "Suffering from chronic Hepatitis E infection",
+        "Vaccinated",
+        "Carrier with low level of Hepatitis B surface antigen"
+      ],
+      "correct_option_id": 2,
+      "explanation": "The presence of isolated Anti-HBs (Surface Antibody) without Core Antibody (Anti-HBc) indicates immunity due to Vaccination. Natural immunity would include Anti-HBc.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Viral hepatitis",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9068,
+      "question": "A patient presenting with an arterial blood pressure of 135/85 needs:",
+      "options": [
+        "Lifestyle modification",
+        "Angiotensin receptor blocker",
+        "Beta-blocker",
+        "Calcium channel blocker",
+        "Alpha blocker"
+      ],
+      "correct_option_id": 0,
+      "explanation": "BP 135/85 falls into the 'Pre-hypertension' or 'High Normal' category (depending on guidelines). The initial management is lifestyle modification (diet, exercise) unless compelling comorbidities exist.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9069,
+      "question": "Hemolytic anemia is characterized by the following, except:",
+      "options": [
+        "Hemolytic jaundice",
+        "Hemolytic crisis",
+        "Increased urinary urobilinogen",
+        "Normal lifespan of red cells"
+      ],
+      "correct_option_id": 3,
+      "explanation": "The fundamental definition of hemolytic anemia is the shortened lifespan of red blood cells (<120 days). It cannot be normal.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Hemolytic anemias",
+      "chapter": "Pathophysiology"
+    },
+    {
+      "id": 9070,
+      "question": "Mantoux test is used to diagnose:",
+      "options": [
+        "Tuberculosis",
+        "Sarcoidosis",
+        "Asthma",
+        "COPD",
+        "Atypical pneumonia"
+      ],
+      "correct_option_id": 0,
+      "explanation": "The Mantoux (Tuberculin Skin Test) assesses cell-mediated immunity to Mycobacterium tuberculosis and is used to screen for latent or active TB.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Tuberculosis",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9071,
+      "question": "Treatment of autoimmune hepatitis includes:",
+      "options": [
+        "Thevetin",
+        "Interferon",
+        "corticosteroids",
+        "Sofosbuvir",
+        "Daclatasvir"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Corticosteroids (with or without Azathioprine) are the mainstay of treatment for Autoimmune Hepatitis to suppress the immune response.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Viral hepatitis",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9072,
+      "question": "Slow rising pulse is a feature of:",
+      "options": [
+        "Endotoxic shock",
+        "Aortic stenosis",
+        "Mitral stenosis",
+        "Constrictive pericarditis",
+        "Aortic regurge"
+      ],
+      "correct_option_id": 1,
+      "explanation": "A slow-rising (Pulsus Parvus et Tardus) pulse is characteristic of Aortic Stenosis due to the obstruction of LV outflow delaying the peak systolic pressure.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9073,
+      "question": "Asymmetric expansion of the chest is due to:",
+      "options": [
+        "COPD",
+        "Bronchial asthma",
+        "Endobronchial obstruction of a large airway",
+        "Bronchopneumonia",
+        "Epiglottitis"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Obstruction of a large airway (e.g., foreign body, tumor) causes collapse/atelectasis of that lung side, leading to reduced expansion on that side (Asymmetry). COPD and Asthma typically cause symmetrical findings.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Physical Signs",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9074,
+      "question": "To establish the diagnosis of hypertension we should:",
+      "options": [
+        "Repeat BP measurement",
+        "Depend on symptoms",
+        "Measure once only",
+        "Use arterial pulse",
+        "Cardiac sounds"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Diagnosis of hypertension generally requires repeated blood pressure measurements on separate occasions (or ABPM) to confirm persistent elevation.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9075,
+      "question": "Which of the following is false regarding cyanosis:",
+      "options": [
+        "One of manifestations of respiratory failure.",
+        "Lips are reliable site for recognition of central cyanosis.",
+        "More prominent in polycythaemia.",
+        "Stagnant circulation is one of possible mechanisms.",
+        "Central cyanosis indicates more than 5 grams of reduced HB in aorta."
+      ],
+      "correct_option_id": 1,
+      "explanation": "Lips can be affected by peripheral factors (cold). The tongue and oral mucous membranes are the most reliable sites for recognizing central cyanosis.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Respiratory Failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9076,
+      "question": "Long-term oxygen therapy is indicated in which of the following conditions in COPD patient:",
+      "options": [
+        "Generalized sibilant rhonchi.",
+        "FEV1 less than 50% of predicted normal value.",
+        "Nocturnal hypoxemia.",
+        "Productive cough.",
+        "Pan-acinar emphysema."
+      ],
+      "correct_option_id": 2,
+      "explanation": "LTOT is indicated for chronic resting hypoxemia (PaO2 < 55 mmHg) or nocturnal hypoxemia with complications (Cor Pulmonale). It improves survival.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "COPD",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9077,
+      "question": "(2 times repeated) - Which of the following drugs may worsen manifestations of heart failure:",
+      "options": [
+        "Loop diuretics.",
+        "sparing diuretics.",
+        "ACE inhibitors.",
+        "Digitalis therapy.",
+        "Verapamil"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Verapamil (a non-dihydropyridine Calcium Channel Blocker) is a negative inotrope and can worsen heart failure with reduced ejection fraction.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9078,
+      "question": "Patient with essential hypertension presented for the first time with BP 150/90 without evidence of target organ damage. What is the most appropriate management?",
+      "options": [
+        "Non-pharmacological measures only.",
+        "Non-pharmacological measures and ambulatory BP follow-up.",
+        "Dual anti-hypertensive drugs.",
+        "Parenteral antihypertensive drug.",
+        "IV fluid therapy."
+      ],
+      "correct_option_id": 1,
+      "explanation": "For Stage 1 HTN (140-159/90-99) without organ damage or high CV risk, lifestyle measures and confirmation via Ambulatory BP Monitoring (ABPM) is the standard initial step.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9079,
+      "question": "Diagnosis of irritable bowel syndrome (IBS) is not appropriate in which of the following conditions:",
+      "options": [
+        "Altered bowel habit.",
+        "Chronic diarrhea.",
+        "Generalized abdominal discomfort.",
+        "Associated headache and fatigue.",
+        "Bleeding per rectum and anemia."
+      ],
+      "correct_option_id": 4,
+      "explanation": "Rectal bleeding and anemia are 'Alarm Symptoms' (Red Flags) that suggest organic pathology (IBD, Cancer) and rule out a diagnosis of simple IBS.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "IBD & IBS",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9080,
+      "question": "Myocarditis is not characterized by:",
+      "options": [
+        "Relative tachycardia.",
+        "Non-specific ECG changes.",
+        "Associated cardiac manifestations.",
+        "Elevated cardiac enzymes.",
+        "Hypertension"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Myocarditis typically causes myocardial depression and Hypotension, not hypertension. It presents with tachycardia, enzymes, and failure.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9081,
+      "question": "Liver cirrhosis is not usually caused by:",
+      "options": [
+        "Chronic viral hepatitis.",
+        "Chronic heart failure.",
+        "Chronic alcohol consumption.",
+        "Auto-immune hepatitis.",
+        "Paracetamol overdose"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Paracetamol overdose causes Acute Liver Failure (necrosis), not chronic cirrhosis. Cirrhosis requires chronic inflammation/fibrosis over time.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Liver cirrhosis",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9082,
+      "question": "Which of the following is false regarding diabetic polyneuropathy:",
+      "options": [
+        "Mostly motor neuropathy.",
+        "Characterized by symmetric polyneuropathy.",
+        "Vitamin B complex and folic acid are usually given.",
+        "Manifested initially by paresthesia.",
+        "Contributes to pathogenesis of diabetic foot."
+      ],
+      "correct_option_id": 0,
+      "explanation": "Diabetic polyneuropathy is primarily a Sensory neuropathy (glove and stocking distribution). Pure motor involvement is rare and usually suggests another etiology.",
+      "term": "Internal Medicine",
+      "subject": "Neurology",
+      "lesson": "Neuropathy",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9083,
+      "question": "(2 times repeated) - Atrial fibrillation is distinguished from multiple extra-systoles by:",
+      "options": [
+        "Pulse deficit more than 10/min.",
+        "Irregular rhythm.",
+        "Unequal pulse volume.",
+        "Slow heart rate.",
+        "Small pulse volume."
+      ],
+      "correct_option_id": 0,
+      "explanation": "A significant pulse deficit (>10 bpm difference between apical and radial pulse) is characteristic of Atrial Fibrillation due to variable diastolic filling and non-perfusing beats.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9084,
+      "question": "Which of the following may distinguish pulmonary versus cardiac etiology of dyspnea:",
+      "options": [
+        "Significantly elevated serum level of B-type natriuretic peptide (BNP).",
+        "Audible rhonchi.",
+        "Chest crackles.",
+        "Cough and hemoptysis.",
+        "Rapid onset of dyspnea."
+      ],
+      "correct_option_id": 0,
+      "explanation": "BNP is released by stretched ventricular myocytes. Elevated BNP strongly suggests a Cardiac cause (Heart Failure) of dyspnea, whereas normal BNP suggests a Pulmonary cause.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9085,
+      "question": "Most common cause of COPD exacerbation is:",
+      "options": [
+        "Irritant inhalation",
+        "Chest infection",
+        "Steroid therapy",
+        "Bronchodilators",
+        "O₂ therapy"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Respiratory tract infections (viral or bacterial) are the most common trigger for acute exacerbations of COPD.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "COPD",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9086,
+      "question": "Pyramidal tract lesion is not associated with which of the following?",
+      "options": [
+        "Ankle clonus",
+        "Babinski sign",
+        "Clasp knife spasticity",
+        "Cogwheel rigidity",
+        "Hyperreflexia"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Cogwheel rigidity is a sign of Extrapyramidal lesions (e.g., Parkinsonism). Pyramidal lesions cause Spasticity (Clasp-knife type).",
+      "term": "Internal Medicine",
+      "subject": "Neurology",
+      "lesson": "Pyramidal Tract Lesions",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9087,
+      "question": "Definitive diagnosis of Hodgkin lymphoma is made by:",
+      "options": [
+        "Complete blood count",
+        "Blood film",
+        "Lymph node biopsy",
+        "Bone marrow biopsy",
+        "ESR"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Lymph node biopsy is required to demonstrate the pathognomonic Reed-Sternberg cells and architecture for the diagnosis of Hodgkin Lymphoma.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Lymphoma/MM/MPDs",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9088,
+      "question": "(2 times repeated) - Dullness of Kronig’s isthmus is usually not seen in:",
+      "options": [
+        "Pancoast lung tumor",
+        "Apical lung fibrosis",
+        "Apical pneumonia",
+        "Post primary pulmonary TB",
+        "Bronchiectasis"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Kronig's isthmus (apical lung resonance) becomes dull in apical pathologies like TB, Pancoast tumor, or fibrosis. Bronchiectasis typically affects the lower lobes and does not cause apical dullness.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Tuberculosis",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9089,
+      "question": "(3 times repeated) - The most common cause of community-acquired pneumonia is:",
+      "options": [
+        "Group A streptococcus",
+        "Hemophilus influenza",
+        "Streptococcus pneumoniae",
+        "Klebsiella pneumoniae",
+        "Chlamydia"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Streptococcus pneumoniae (Pneumococcus) is globally the most common bacterial pathogen causing Community-Acquired Pneumonia (CAP).",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Pneumonia",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9090,
+      "question": "Stroke is defined by acute onset of:",
+      "options": [
+        "Focal neurological deficit caused by thrombotic or hemorrhagic lesion",
+        "Focal neurological deficit caused by demyelinating lesion",
+        "Focal neurological deficit caused by degenerative lesion",
+        "Focal neurological deficit caused by inflammatory lesion",
+        "Focal neurological deficit caused by neoplastic lesion"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Stroke is specifically a vascular event. It is defined as a focal neurological deficit of vascular origin (ischemic or hemorrhagic) lasting >24 hours.",
+      "term": "Internal Medicine",
+      "subject": "Neurology",
+      "lesson": "Stroke",
+      "chapter": "Definition"
+    },
+    {
+      "id": 9091,
+      "question": "Which of the following criteria may be a warning sign regarding chest pain?",
+      "options": [
+        "Localized, stitching and infra-mammary",
+        "Tender on examination",
+        "Relieved mainly by antacids",
+        "Central, compressing, prolonged and associated with dyspnea and diaphoresis",
+        "Of short duration"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Central, compressing pain with autonomic symptoms (diaphoresis) and dyspnea is classic for Acute Coronary Syndrome (MI) and is a major warning sign.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Ischemic heart diseases",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9092,
+      "question": "(2 times repeated) - Causes of transient hemiplegia include:",
+      "options": [
+        "Motor neurone disease",
+        "Subacute combined degeneration",
+        "Todd’s paralysis",
+        "Embolic hemiplegia",
+        "Thrombotic hemiplegia"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Todd's paralysis is a transient neurological deficit (hemiplegia) that occurs after a seizure and resolves spontaneously. Embolic/Thrombotic cause stroke (lasting).",
+      "term": "Internal Medicine",
+      "subject": "Neurology",
+      "lesson": "Stroke",
+      "chapter": "Differential Diagnosis"
+    },
+    {
+      "id": 9093,
+      "question": "(2 times repeated) - Malabsorption syndrome may be associated with which of the following?",
+      "options": [
+        "Parkinson’s disease",
+        "Friedrich disease",
+        "Celiac disease",
+        "Duchenne disease",
+        "Refsum disease"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Celiac disease is a classic cause of malabsorption due to autoimmune damage to the small intestinal villi upon exposure to gluten.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Malabsorption",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9094,
+      "question": "A man presenting with dyspnea, on examination: pulsus alternans was felt, S3 gallop, and bilateral basal lung crackles were audible. Most probable diagnosis is:",
+      "options": [
+        "COPD",
+        "Bronchial asthma",
+        "Right sided heart failure",
+        "Left sided heart failure",
+        "Pleural effusion"
+      ],
+      "correct_option_id": 3,
+      "explanation": "S3 gallop, Pulsus alternans, and basal crackles are the classic triad of signs for decompensated Left Ventricular Failure.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9095,
+      "question": "One of the following antihypertensive drugs commonly causes dry irritant cough:",
+      "options": [
+        "Angiotensin converting enzyme inhibitors",
+        "Alpha receptor antagonists",
+        "Beta adrenergic receptor antagonists",
+        "Angiotensin receptor blockers",
+        "Sympatholytic agents"
+      ],
+      "correct_option_id": 0,
+      "explanation": "ACE inhibitors cause a dry cough in up to 20% of patients due to the accumulation of Bradykinin in the lungs.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Complications"
+    },
+    {
+      "id": 9096,
+      "question": "(2 times repeated) - Syncope best described by which of the following statements:",
+      "options": [
+        "Prolonged state of disturbed conscious level",
+        "Central crushing chest pain",
+        "Sudden and transient loss of consciousness caused by cardiac, neurogenic and postural mechanisms",
+        "Unilateral weakness",
+        "Unsteadiness"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Syncope is defined as a transient, self-terminating loss of consciousness and postural tone due to global cerebral hypoperfusion.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Definition"
+    },
+    {
+      "id": 9097,
+      "question": "Which of the following may cause sudden cardiac death in young age:",
+      "options": [
+        "Viral myocarditis",
+        "Hypertrophic obstructive cardiomyopathy",
+        "Left ventricular failure",
+        "Tricuspid regurgitation",
+        "Angina pectoris"
+      ],
+      "correct_option_id": 1,
+      "explanation": "HOCM is the most common cause of sudden cardiac death in young athletes due to fatal arrhythmias.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Complications"
+    },
+    {
+      "id": 9098,
+      "question": "(2 times repeated) - Most common cause of myocarditis:",
+      "options": [
+        "Viral infection",
+        "Rheumatic fever",
+        "Autoimmune",
+        "Malignant infiltration",
+        "Idiopathic"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Viral infections (e.g., Coxsackie B, Adenovirus) are the most common etiology of myocarditis.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9099,
+      "question": "(2 times repeated) - Conditions associated with microcytosis (microcytic anemia) do not include:",
+      "options": [
+        "Acute hemolysis",
+        "Thalassemia",
+        "Iron deficiency anemia",
+        "Sideroblastic anemia",
+        "Anemia of chronic disease"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Acute hemolysis typically causes normocytic anemia (or macrocytic if reticulocytosis is high). Microcytosis is seen in Iron deficiency, Thalassemia, Sideroblastic anemia, and chronic disease.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Microcytic anemia",
+      "chapter": "Differential Diagnosis"
+    },
+    {
+      "id": 9100,
+      "question": "(3 times repeated) - Pancytopenia is not associated with:",
+      "options": [
+        "Aplastic anaemia",
+        "Bone marrow infiltration",
+        "G6PD deficiency",
+        "Hypersplenism",
+        "Paroxysmal nocturnal haemoglobinuria"
+      ],
+      "correct_option_id": 2,
+      "explanation": "G6PD deficiency causes episodic hemolysis (low RBCs only), not pancytopenia. Pancytopenia implies bone marrow failure or splenic sequestration of all lines.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Hemolytic anemias",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9101,
+      "question": "Irritable bowel syndrome is characterized by:",
+      "options": [
+        "Acute abdominal pain",
+        "Vomiting",
+        "Chronic abdominal pain",
+        "Jaundice",
+        "Weight loss"
+      ],
+      "correct_option_id": 2,
+      "explanation": "IBS is a chronic functional disorder characterized by recurrent (chronic) abdominal pain associated with defecation or change in bowel habits.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "IBD & IBS",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9102,
+      "question": "Which of the following does not differentiate between hemoptysis and hematemesis:",
+      "options": [
+        "Development of anemia",
+        "Color of blood",
+        "Contents of blood",
+        "pH of blood",
+        "Following symptoms (cough or melena)"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Both hemoptysis (respiratory bleeding) and hematemesis (GI bleeding) can be severe enough to cause anemia, so this does not distinguish between them. pH (acid vs alkaline), color (bright vs dark), and contents (food vs froth) do.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Hemoptysis",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9103,
+      "question": "Which of the following is not a common cause for subtotal villous atrophy:",
+      "options": [
+        "Tropical sprue",
+        "Celiac disease",
+        "Giardiasis",
+        "HIV enteropathy",
+        "Clostridium difficile"
+      ],
+      "correct_option_id": 4,
+      "explanation": "C. difficile causes pseudomembranous colitis, not villous atrophy. Villous atrophy is seen in Celiac, Tropical Sprue, Giardiasis, and other malabsorptive states.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Malabsorption",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9104,
+      "question": "The tone of the muscles affected by gradually progressive upper motor neuron lesion would be:",
+      "options": [
+        "Normal",
+        "Spastic",
+        "Rigid",
+        "Mildly flaccid",
+        "Severely flaccid"
+      ],
+      "correct_option_id": 1,
+      "explanation": "UMN lesions cause Spasticity (velocity-dependent increase in tone). Rigidity is extrapyramidal; flaccidity is LMN.",
+      "term": "Internal Medicine",
+      "subject": "Neurology",
+      "lesson": "Pyramidal Tract Lesions",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9105,
+      "question": "(2 times repeated) - The presence of fever, arthralgia, erythema nodosum, hilar lymphadenopathy defines:",
+      "options": [
+        "Lofgren syndrome",
+        "Bronchial asthma",
+        "Hypersensitivity pneumonitis",
+        "Heerfordt syndrome",
+        "Histiocytosis X"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Lofgren's syndrome is a specific acute clinical presentation of Sarcoidosis characterized by the triad of Erythema Nodosum, Bilateral Hilar Lymphadenopathy, and Arthralgia/Fever.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Interstitial Lung Diseases",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9106,
+      "question": "(2 times repeated) - Female patient presented by thrombocytopenia, anemia, leukocytosis and abnormal blast cells in peripheral blood film. The most appropriate second step is:",
+      "options": [
+        "Bone marrow aspirate",
+        "Anticoagulation",
+        "Antibiotic therapy",
+        "Repeat CBC",
+        "Request ESR"
+      ],
+      "correct_option_id": 0,
+      "explanation": "The presence of blasts in the peripheral blood with cytopenias suggests Acute Leukemia. Bone marrow aspiration/biopsy is the mandatory next step to confirm diagnosis and type.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Leukemia",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9107,
+      "question": "The first line therapy of systemic hypertension is:",
+      "options": [
+        "ACE inhibitors",
+        "Calcium antagonists",
+        "Beta adrenergic antagonists",
+        "Alpha blockers",
+        "Thiazide diuretics"
+      ],
+      "correct_option_id": 0,
+      "explanation": "ACE inhibitors (or ARBs, CCBs, Thiazides) are first-line agents. Beta-blockers and Alpha-blockers are no longer first-line for uncomplicated hypertension.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9108,
+      "question": "(2 times repeated) - Surest clinical sign in emphysema:",
+      "options": [
+        "Audible expiratory rhonchi",
+        "Cyanosis",
+        "Digital clubbing",
+        "Audible lung crackles",
+        "Encroachment on both hepatic and cardiac dullness"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Hyperinflation in emphysema causes the lungs to expand, encroaching on and diminishing the area of cardiac and hepatic dullness on percussion.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "COPD",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9109,
+      "question": "Which of the following is the most useful in the management of acute heart failure:",
+      "options": [
+        "Levothyroxine",
+        "Corticosteroids",
+        "Antibiotics",
+        "IV fluids",
+        "Diuretic"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Loop Diuretics (e.g., Furosemide) are the cornerstone of management in Acute Heart Failure to relieve pulmonary congestion/edema.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9110,
+      "question": "Ascites precox may occur in:",
+      "options": [
+        "Constrictive pericarditis",
+        "Liver cell failure",
+        "Right sided heart failure",
+        "Nephrotic syndrome",
+        "Protein losing enteropathy"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Ascites Precox (ascites appearing before leg edema) is a classic sign of Constrictive Pericarditis due to high systemic venous pressure affecting the liver surface.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9111,
+      "question": "(3 times repeated) - 65 years old male presented to ER by severe central chest pain referred to the back, on examination there was unequal pulse volume. What is the most appropriate diagnosis?",
+      "options": [
+        "Myocardial infarction",
+        "Aortic dissecting aneurysm",
+        "Bacterial pneumonia",
+        "Pleuritic chest pain",
+        "Cardiomegaly"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Severe tearing chest pain radiating to the back combined with pulse deficits (unequal pulses) is the classic presentation of Aortic Dissection.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9112,
+      "question": "One of the most reliable markers for renal injury and cardiovascular disease is:",
+      "options": [
+        "Urea level",
+        "Abnormal albumin excretion (albumin/creat ratio)",
+        "K⁺ level",
+        "Abnormal ECG",
+        "Haematuria"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Microalbuminuria (Albumin/Creatinine ratio) is an early and sensitive marker for endothelial dysfunction, renal injury (nephropathy), and cardiovascular risk.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9113,
+      "question": "Which of the following conditions will exclude functional gastrointestinal disorders:",
+      "options": [
+        "Frequent abdominal pain",
+        "Frequent change in bowel habits",
+        "Duration of symptoms is only 3 months",
+        "Positive fecal calprotectin",
+        "Passage of mucus with stool"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Positive Fecal Calprotectin indicates intestinal inflammation (e.g., IBD), which excludes functional disorders like IBS.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "IBD & IBS",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9114,
+      "question": "Paroxysmal hypertension is classically found in:",
+      "options": [
+        "Coarctation of the aorta",
+        "Eclampsia",
+        "Renal artery stenosis",
+        "Pheochromocytoma",
+        "Conn’s syndrome"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Pheochromocytoma releases bursts of catecholamines, leading to episodic (paroxysmal) hypertension accompanied by headache, palpitations, and sweating.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9115,
+      "question": "The characteristic pathological finding of sarcoidosis is:",
+      "options": [
+        "Fatty degeneration",
+        "Hamartoma",
+        "Metaplasia",
+        "Non-caseating granuloma",
+        "Caseating granuloma"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Non-caseating granulomas are the hallmark histological finding in Sarcoidosis. Caseating granulomas are typical of TB.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Interstitial Lung Diseases",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9116,
+      "question": "Which of the following can cause high cardiac output failure:",
+      "options": [
+        "Coronary artery disease",
+        "Mitral stenosis",
+        "Thyrotoxicosis",
+        "Myocarditis",
+        "Pulmonary hypertension"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Thyrotoxicosis increases metabolic demand and causes vasodilation, leading to High Output Heart Failure. The others cause low output failure.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9117,
+      "question": "Which of the following is not a feature of beta thalassemia major:",
+      "options": [
+        "Splenomegaly",
+        "Iron deficiency",
+        "Pigment gallstones",
+        "Hemolytic jaundice",
+        "Target cells in blood film"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Thalassemia Major is associated with Iron Overload (due to hemolysis and transfusions), not Iron Deficiency. All other options are features of the disease.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Microcytic anemia",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9118,
+      "question": "Typical anginal pain is not characterized by:",
+      "options": [
+        "Retrosternal pain",
+        "Heavy in character",
+        "Tearing in character",
+        "Increased with exertion",
+        "Relieved by nitrates"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Tearing pain is characteristic of Aortic Dissection. Angina is typically described as heavy, pressure, or squeezing.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Ischemic heart diseases",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9119,
+      "question": "Which of the following does not cause bilateral hilar lymphadenopathy:",
+      "options": [
+        "Sarcoidosis",
+        "Pneumonia",
+        "Lymphoma",
+        "Pulmonary tuberculosis",
+        "Bronchial carcinoma"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Pneumonia typically causes parenchymal consolidation, not bilateral hilar lymphadenopathy. BHL is seen in Sarcoidosis, Lymphoma, and TB.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Interstitial Lung Diseases",
+      "chapter": "Differential Diagnosis"
+    },
+    {
+      "id": 9120,
+      "question": "Spirometry in COPD usually reveals:",
+      "options": [
+        "Obstructive lung pattern",
+        "Restrictive lung pattern",
+        "Normal pattern",
+        "Mixed pattern",
+        "Nonspecific changes"
+      ],
+      "correct_option_id": 0,
+      "explanation": "COPD is an Obstructive Lung Disease, defined by a reduced FEV1/FVC ratio (<0.70).",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "COPD",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9121,
+      "question": "Celiac disease is not characterized by:",
+      "options": [
+        "Steatorrhea",
+        "Subtotal villous atrophy",
+        "Positive tissue transglutaminase",
+        "Immunoglobulin A deficiency",
+        "Chronic constipation"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Celiac disease typically causes chronic diarrhea/steatorrhea due to malabsorption, not constipation.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Malabsorption",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9122,
+      "question": "Which of the following is not a cause of acute dyspnea:",
+      "options": [
+        "Bronchogenic carcinoma",
+        "Pulmonary embolism",
+        "Pneumothorax",
+        "Anaphylaxis",
+        "Cardiac tamponade"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Bronchogenic carcinoma typically presents with chronic, progressive dyspnea. PE, Pneumothorax, Anaphylaxis, and Tamponade are causes of sudden/acute dyspnea.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Dyspnea",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9123,
+      "question": "The most reliable symptom of acute pulmonary embolism is:",
+      "options": [
+        "Retrosternal chest pain",
+        "Shortness of breath",
+        "Syncope",
+        "Cough",
+        "Vomiting"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Shortness of breath (dyspnea) is the most common and reliable symptom of PE, present in over 80% of cases.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Pulmonary Embolism",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9124,
+      "question": "Most common cause of upper gastrointestinal bleeding is:",
+      "options": [
+        "Erosive esophagitis",
+        "Mallory-Weiss tear",
+        "Vascular malformation",
+        "Peptic ulcer disease",
+        "Gastric carcinoma"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Peptic Ulcer Disease is the leading cause of upper GI bleeding, accounting for 30-40% of cases.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Portal hypertension",
+      "chapter": "Differential Diagnosis"
+    },
+    {
+      "id": 9125,
+      "question": "Iron deficiency anemia may be caused by:",
+      "options": [
+        "Chronic blood loss",
+        "Acute hemolysis",
+        "Vitamin B12 deficiency",
+        "Bone marrow infiltration",
+        "Acute bleeding"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Chronic blood loss (e.g., GI bleeding, menorrhagia) depletes iron stores over time, leading to iron deficiency. Acute bleeding causes normocytic anemia.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Microcytic anemia",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9126,
+      "question": "Hepatic failure may produce:",
+      "options": [
+        "Chorea",
+        "Flapping tremors",
+        "Hemiballismus",
+        "intention kinetic tremors",
+        "Fine tremors"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Asterixis (Flapping Tremor) is a hallmark sign of hepatic encephalopathy caused by metabolic dysfunction in liver failure.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Liver cell failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9127,
+      "question": "Which of the following causes dyspnea with normal cardiorespiratory function:",
+      "options": [
+        "COPD",
+        "Bronchial asthma",
+        "Coronary heart disease",
+        "Anemia",
+        "Pulmonary embolism"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Anemia causes dyspnea due to reduced oxygen-carrying capacity of the blood, while the heart and lungs themselves may be structurally and functionally normal (initially).",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Dyspnea",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9128,
+      "question": "(2 times repeated) - The color of urine is normal in jaundice caused by:",
+      "options": [
+        "Gilbert syndrome",
+        "Cancer head of pancreas",
+        "Stone in common bile duct",
+        "Acute hepatitis",
+        "Cholestasis of pregnancy"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Gilbert syndrome causes unconjugated hyperbilirubinemia. Unconjugated bilirubin is not water-soluble and does not appear in urine (acholuric jaundice). The other options cause conjugated hyperbilirubinemia (dark urine).",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Jaundice",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9129,
+      "question": "17-year-old male with malaise, anorexia, fever, nausea, jaundice, dark urine, pale stool. Most likely diagnosis:",
+      "options": [
+        "Peptic ulcer disease",
+        "Gastroenteritis",
+        "Viral hepatitis A",
+        "Myocarditis",
+        "Bacterial pneumonia"
+      ],
+      "correct_option_id": 2,
+      "explanation": "The prodrome of viral symptoms (fever, malaise) followed by jaundice, dark urine, and pale stool in a young person is the classic presentation of Acute Viral Hepatitis A.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Viral hepatitis",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9130,
+      "question": "Example of transudative ascites is:",
+      "options": [
+        "Malignant peritonitis",
+        "Budd Chiari syndrome",
+        "Liver cirrhosis",
+        "Chylous ascites",
+        "Tuberculosis"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Liver cirrhosis causes portal hypertension, leading to transudative ascites (Low SAAG > 1.1 g/dL implies portal HTN, but often simple distinction calls cirrhosis transudate vs TB/Cancer exudate). Note: Cirrhosis is high gradient (Transudate-like mechanics), TB/Malig are low gradient (Exudate).",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Liver cirrhosis",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9131,
+      "question": "Which is not a cause of sinus bradycardia:",
+      "options": [
+        "Myxedema",
+        "Hypothermia",
+        "Obstructive jaundice",
+        "Complete heart block",
+        "Beta blockers"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Complete Heart Block is a dissociation between atria and ventricles; it is not 'Sinus' bradycardia. The sinus node may be firing normally, but ventricles are slow. The others suppress the sinus node.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9132,
+      "question": "Which of the following is a centrally acting antihypertensive drug:",
+      "options": [
+        "Prazosin",
+        "Methyldopa",
+        "Amilozide",
+        "Atenolol",
+        "Hydralazine"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Methyldopa is a central alpha-2 agonist. Prazosin is an alpha-1 blocker (peripheral), Atenolol is a beta-blocker.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Hypertension",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9133,
+      "question": "Which is false regarding edema in congestive heart failure:",
+      "options": [
+        "Initially noticed in the morning",
+        "Starts in the dependent part",
+        "Pitting edema",
+        "Sacral edema in non-ambulatory patient",
+        "Due to salt and water retention"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Cardiac edema typically accumulates during the day due to gravity and is worse in the evening, not the morning. Renal edema (e.g., periorbital) is often noticed in the morning.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9134,
+      "question": "Worldwide commonest cause of hemoptysis is:",
+      "options": [
+        "Pulmonary tuberculosis",
+        "Bronchogenic carcinoma",
+        "Chronic bronchitis",
+        "Pneumonia",
+        "Pulmonary embolism"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Pulmonary Tuberculosis remains the most common cause of hemoptysis worldwide, especially in endemic regions.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Hemoptysis",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9135,
+      "question": "Woody dullness on chest percussion is classically found in:",
+      "options": [
+        "Pleural effusion",
+        "Thickened pleura",
+        "Consolidation",
+        "Lung collapse",
+        "Interstitial fibrosis"
+      ],
+      "correct_option_id": 1,
+      "explanation": "Woody dullness is a specific percussion note associated with Thickened Pleura. Effusion is 'Stony dull'.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Physical Signs",
+      "chapter": "Diagnosis & Investigations"
+    },
+    {
+      "id": 9136,
+      "question": "Most common cause of acute corpulmonale is:",
+      "options": [
+        "Lobar consolidation",
+        "Pneumothorax",
+        "Pulmonary thromboembolism",
+        "Fibrosing alveolitis",
+        "Bronchial asthma"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Acute Cor Pulmonale (acute RV strain) is most commonly caused by a massive Pulmonary Thromboembolism.",
+      "term": "Internal Medicine",
+      "subject": "Cardiology",
+      "lesson": "Heart failure",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9137,
+      "question": "Which of the following is not a complication of pneumonia:",
+      "options": [
+        "Pleural effusion",
+        "Empyema",
+        "Lung abscess",
+        "Pleural adhesion",
+        "Pancreatitis"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Pancreatitis is not a recognized complication of pneumonia. Pneumonia can spread locally (effusion, empyema) or cause sepsis/abscess.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Pneumonia",
+      "chapter": "Complications"
+    },
+    {
+      "id": 9138,
+      "question": "Most commonly affected organ in sarcoidosis:",
+      "options": [
+        "Lungs",
+        "Heart",
+        "Kidneys",
+        "Skin",
+        "Liver"
+      ],
+      "correct_option_id": 0,
+      "explanation": "The lungs and intrathoracic lymph nodes are involved in over 90% of Sarcoidosis cases.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Interstitial Lung Diseases",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9139,
+      "question": "Which of the following is not a feature of upper motor neuron lesion:",
+      "options": [
+        "Spasticity",
+        "Babinski's’sign",
+        "Clonus",
+        "Fasciculations",
+        "Hyperreflexia"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Fasciculations (visible muscle twitches) are a sign of Lower Motor Neuron (LMN) degeneration/irritation, not UMN.",
+      "term": "Internal Medicine",
+      "subject": "Neurology",
+      "lesson": "Pyramidal Tract Lesions",
+      "chapter": "Differential Diagnosis"
+    },
+    {
+      "id": 9140,
+      "question": "Macrocytic anemia is found in:",
+      "options": [
+        "Pernicious anemia",
+        "Iron deficiency anemia",
+        "Pregnancy",
+        "Thalassemia",
+        "Sideroblastic anemia"
+      ],
+      "correct_option_id": 0,
+      "explanation": "Pernicious anemia (B12 deficiency) causes Megaloblastic (Macrocytic) anemia. Iron deficiency and Thalassemia cause Microcytic anemia.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Macrocytic anemia",
+      "chapter": "Etiology"
+    },
+    {
+      "id": 9141,
+      "question": "Pica is a symptom of:",
+      "options": [
+        "Thalassemia",
+        "Sickle cell anemia",
+        "Megaloblastic anemia",
+        "Hemolytic anemia",
+        "Iron deficiency anemia"
+      ],
+      "correct_option_id": 4,
+      "explanation": "Pica (craving non-food items like ice/dirt) is a specific and classic symptom of Iron Deficiency Anemia.",
+      "term": "Internal Medicine",
+      "subject": "Hematology",
+      "lesson": "Microcytic anemia",
+      "chapter": "Clinical Picture"
+    },
+    {
+      "id": 9142,
+      "question": "GERD complications do not include:",
+      "options": [
+        "Esophagitis",
+        "Stricture",
+        "Barrett’s esophagus",
+        "cancer colon",
+        "esophageal adenocarcinoma"
+      ],
+      "correct_option_id": 3,
+      "explanation": "GERD affects the upper GI tract. It causes Esophagitis, Strictures, Barrett's, and Esophageal adenocarcinoma, but is not a risk factor for Colon Cancer.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "GERD",
+      "chapter": "Complications"
+    },
+    {
+      "id": 9143,
+      "question": "Hemoptysis is not common in:",
+      "options": [
+        "Bronchiectasis",
+        "ANCA-associated vasculitis",
+        "Bronchogenic carcinoma",
+        "Bronchial asthma",
+        "Pulmonary tuberculosis"
+      ],
+      "correct_option_id": 3,
+      "explanation": "While severe coughing in asthma can rarely cause minor bleeding, hemoptysis is not a common or typical feature of asthma and suggests another diagnosis.",
+      "term": "Internal Medicine",
+      "subject": "Respiratory",
+      "lesson": "Hemoptysis",
+      "chapter": "Differential Diagnosis"
+    },
+    {
+      "id": 9144,
+      "question": "Main treatment of celiac disease:",
+      "options": [
+        "Carbohydrate-free diet",
+        "Protein-free diet",
+        "Gluten-free diet",
+        "Antacids",
+        "Antibiotics"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Lifelong adherence to a Gluten-Free Diet is the only effective treatment for Celiac Disease.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Malabsorption",
+      "chapter": "Management & Treatment"
+    },
+    {
+      "id": 9145,
+      "question": "Which is not a complication of hepatic cirrhosis?",
+      "options": [
+        "Spontaneous bacterial peritonitis",
+        "Hepatocellular carcinoma",
+        "Thrombocytosis",
+        "Portal hypertension",
+        "Portal vein thrombosis"
+      ],
+      "correct_option_id": 2,
+      "explanation": "Cirrhosis causes Thrombocytopenia (low platelets) due to hypersplenism and reduced thrombopoietin. Thrombocytosis is not a complication.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Liver cirrhosis",
+      "chapter": "Complications"
+    },
+    {
+      "id": 9146,
+      "question": "First-line pharmacological agent in upper gastrointestinal bleeding from oesophageal varices:",
+      "options": [
+        "H2 blockers",
+        "Proton pump inhibitors",
+        "Antacids",
+        "Octreotide",
+        "Antiemetics"
+      ],
+      "correct_option_id": 3,
+      "explanation": "Vasoactive drugs like Octreotide (somatostatin analogue) or Terlipressin are the first-line pharmacological treatment to lower portal pressure and stop variceal bleeding.",
+      "term": "Internal Medicine",
+      "subject": "GIT & Liver",
+      "lesson": "Portal hypertension",
+      "chapter": "Management & Treatment"
+    }
+  ]
+}
