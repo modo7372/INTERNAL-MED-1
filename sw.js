@@ -7,7 +7,6 @@ const ASSETS = [
   './js/ui.js',
   './js/data.js',
   './js/game.js',
-  './js/main.js',
   './questions_list.json'
 ];
 
