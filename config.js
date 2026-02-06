@@ -2,9 +2,12 @@
 // CONFIGURATION & FIREBASE SETUP
 // ============================================
 
+// APP IDENTIFIER - Change this for each app to isolate localStorage
+const APP_ID = 'medquiz_v2';  // Change this for each app: 'medquiz_v1', 'medquiz_v2', etc.
+
 // User Classification
 const ADMIN_IDS = [5814737296];  // Full access including analytics
-const ALLOWED_USER_IDS = [2004826495];     // Access to all features except analytics
+const ALLOWED_USER_IDS = [];     // Access to all features except analytics
 
 const ENABLE_SECURITY = true;
 
@@ -89,6 +92,11 @@ function hasAccess() {
     return userRole !== 'none';
 }
 
+// LocalStorage key helpers
+function getStorageKey(key) {
+    return `${APP_ID}_${key}`;
+}
+
 export { app, auth, db, signInAnonymously, onAuthStateChanged, ref, set, get, update, push, serverTimestamp,
-         ADMIN_IDS, ALLOWED_USER_IDS, ENABLE_SECURITY, THEMES, State, 
+         ADMIN_IDS, ALLOWED_USER_IDS, ENABLE_SECURITY, THEMES, State, APP_ID, getStorageKey,
          checkUserRole, isAdmin, isAllowedUser, hasAccess, userRole };
