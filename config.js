@@ -7,7 +7,7 @@ const APP_ID = 'medquiz_v2';  // Change this for each app: 'medquiz_v1', 'medqui
 
 // User Classification
 const ADMIN_IDS = [5814737296];  // Full access including analytics
-const ALLOWED_USER_IDS = [];     // Access to all features except analytics
+const ALLOWED_USER_IDS = [2004826495,];     // Access to all features except analytics
 
 const ENABLE_SECURITY = false;
 
