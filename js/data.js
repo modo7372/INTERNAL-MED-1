@@ -50,7 +50,7 @@ const Data = {
     initSync: async () => {
         console.log("🔄 Starting data sync... App ID:", APP_ID);
         
-        // Load local data first - using APP_ID prefixed keys
+        // Load local data first - using APP_ID prefixed keys (per-app localStorage)
         const local = {
             mistakes: JSON.parse(localStorage.getItem(getStorageKey('mistakes')) || '[]'),
             archive: JSON.parse(localStorage.getItem(getStorageKey('archive')) || '[]'),
@@ -60,19 +60,22 @@ const Data = {
         };
         State.localData = local;
         
-        // Sync with Firebase
+        // Sync with Firebase - per USER (not per app) so same Telegram ID shares data across devices
         if (window.currentUser) {
             try {
-                const userRef = ref(db, 'user_progress/' + window.currentUser.uid + '/' + APP_ID);
+                // Use Telegram ID as the key for Firebase, so same user shares data across devices
+                const telegramId = State.user.telegram_id || State.user.id || 'anonymous';
+                const userRef = ref(db, 'user_data/' + telegramId);
                 const snapshot = await get(userRef);
                 const cloudData = snapshot.val();
                 
                 if (cloudData) {
+                    // Merge cloud data with local (cloud takes precedence for same question IDs)
                     State.localData = {
                         mistakes: Data.mergeArrays(local.mistakes, cloudData.mistakes),
                         archive: Data.mergeArrays(local.archive, cloudData.archive),
                         fav: Data.mergeArrays(local.fav, cloudData.fav),
-                        settings: { ...local.settings, ...cloudData.settings },
+                        settings: { ...cloudData.settings, ...local.settings }, // Local settings take precedence
                         sessions: cloudData.sessions || local.sessions
                     };
                     
@@ -80,6 +83,7 @@ const Data = {
                     if (State.localData.settings.anim === false && window.UI) UI.toggleAnim(false);
                 }
                 
+                // Save merged data back to Firebase
                 Data.saveData();
             } catch (e) {
                 console.log("⚠️ Firebase sync failed:", e.message);
@@ -101,20 +105,23 @@ const Data = {
             archive: State.localData.archive,
             fav: State.localData.fav,
             settings: State.localData.settings,
+            telegram_id: State.user.telegram_id || State.user.id,
+            user_name: State.user.first_name,
             last_updated: serverTimestamp()
         };
         
-        // LocalStorage - using APP_ID prefixed keys
+        // LocalStorage - using APP_ID prefixed keys (per-app isolation)
         localStorage.setItem(getStorageKey('mistakes'), JSON.stringify(State.localData.mistakes));
         localStorage.setItem(getStorageKey('archive'), JSON.stringify(State.localData.archive));
         localStorage.setItem(getStorageKey('fav'), JSON.stringify(State.localData.fav));
         localStorage.setItem(getStorageKey('settings'), JSON.stringify(State.localData.settings));
         
-        // Firebase - also include APP_ID in path
+        // Firebase - per USER (shared across devices for same Telegram ID)
         if (window.currentUser) {
             try {
-                await update(ref(db, 'user_progress/' + window.currentUser.uid + '/' + APP_ID), dataToSave);
-                console.log("💾 Saved to Firebase for app:", APP_ID);
+                const telegramId = State.user.telegram_id || State.user.id || 'anonymous';
+                await update(ref(db, 'user_data/' + telegramId), dataToSave);
+                console.log("💾 Saved to Firebase for user:", telegramId);
             } catch (e) {
                 console.log("⚠️ Firebase save failed:", e.message);
             }
@@ -129,9 +136,11 @@ const Data = {
         
         console.log("📊 Saving session analytics...");
         
+        const telegramId = State.user.telegram_id || State.user.id || 'anonymous';
+        
         const sessionData = {
             user_id: window.currentUser ? window.currentUser.uid : 'anonymous',
-            telegram_id: State.user.telegram_id || 0,
+            telegram_id: telegramId,
             user_name: State.user.first_name,
             app_id: APP_ID,
             timestamp: serverTimestamp(),
@@ -161,20 +170,20 @@ const Data = {
         };
         
         try {
-            // Save to leaderboard (app-specific)
+            // Save to leaderboard (per user, not per app - so rankings are across all apps)
             if (State.sel.subj) {
-                const ctx = (State.sel.subj).replace(/[.#$/\[\]]/g, "_");
-                await set(ref(db, 'leaderboards/' + APP_ID + '/' + ctx + '/' + window.currentUser.uid), {
+                const ctx = (State.sel.subj).replace(/[.#$\[\]]/g, "_");
+                await set(ref(db, 'leaderboards/' + ctx + '/' + telegramId), {
                     score: sessionData.score,
                     accuracy: sessionData.accuracy,
                     total: sessionData.total_questions,
                     name: State.user.first_name,
                     timestamp: sessionData.timestamp
                 });
-                console.log("🏆 Leaderboard updated for app:", APP_ID);
+                console.log("🏆 Leaderboard updated for user:", telegramId);
             }
             
-            // Save detailed analytics (app-specific)
+            // Save detailed analytics (per app for analytics, but linked to user)
             const sessionKey = push(ref(db, 'analytics/' + APP_ID + '/sessions')).key;
             await set(ref(db, 'analytics/' + APP_ID + '/sessions/' + sessionKey), sessionData);
             console.log("✅ Analytics saved:", sessionKey, "for app:", APP_ID);
@@ -187,9 +196,11 @@ const Data = {
     },
 
     updateUserStats: async (session) => {
-        if (!window.currentUser) return;
+        const telegramId = State.user.telegram_id || State.user.id || 'anonymous';
+        if (!telegramId || telegramId === 'anonymous') return;
         
-        const statsRef = ref(db, 'analytics/' + APP_ID + '/user_stats/' + window.currentUser.uid);
+        // User stats are per user (shared across devices), but we track which apps they use
+        const statsRef = ref(db, 'user_stats/' + telegramId);
         const snapshot = await get(statsRef);
         const current = snapshot.val() || {
             total_sessions: 0,
@@ -197,7 +208,8 @@ const Data = {
             total_correct: 0,
             subjects: {},
             weak_areas: [],
-            strong_areas: []
+            strong_areas: [],
+            apps_used: []
         };
         
         current.total_sessions++;
@@ -206,7 +218,11 @@ const Data = {
         current.last_active = session.timestamp;
         current.telegram_id = session.telegram_id;
         current.user_name = session.user_name;
-        current.app_id = APP_ID;
+        
+        // Track which apps this user has used
+        if (!current.apps_used.includes(APP_ID)) {
+            current.apps_used.push(APP_ID);
+        }
         
         // Subject breakdown
         session.answers.forEach(ans => {
@@ -235,7 +251,7 @@ const Data = {
         current.strong_areas = strongAreas;
         
         await set(statsRef, current);
-        console.log("👤 User stats updated for app:", APP_ID);
+        console.log("👤 User stats updated for user:", telegramId);
     },
 
     loadAnalytics: async () => {
@@ -249,7 +265,7 @@ const Data = {
         try {
             const [sessionsSnap, usersSnap] = await Promise.all([
                 get(ref(db, 'analytics/' + APP_ID + '/sessions').limitToLast(100)),
-                get(ref(db, 'analytics/' + APP_ID + '/user_stats'))
+                get(ref(db, 'user_stats'))
             ]);
             
             const sessions = sessionsSnap.val() || {};
