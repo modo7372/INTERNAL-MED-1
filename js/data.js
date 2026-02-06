@@ -1,13 +1,12 @@
 // data.js - Updated for ES modules and 3-tier user system
 
 import { app, auth, db, signInAnonymously, onAuthStateChanged, ref, set, get, update, push, serverTimestamp,
-         ADMIN_IDS, ALLOWED_USER_IDS, THEMES, State, checkUserRole, isAdmin, isAllowedUser, hasAccess } from '../config.js';
+         ADMIN_IDS, ALLOWED_USER_IDS, THEMES, State, APP_ID, getStorageKey, checkUserRole, isAdmin, isAllowedUser, hasAccess } from '../config.js';
 
 const Data = {
     
     initAuth: async () => {
         console.log("🔥 Initializing Firebase Auth from data.js...");
-        // Auth is now handled in index.html main module
         return Promise.resolve();
     },
 
@@ -49,22 +48,22 @@ const Data = {
     },
     
     initSync: async () => {
-        console.log("🔄 Starting data sync...");
+        console.log("🔄 Starting data sync... App ID:", APP_ID);
         
-        // Load local data first
+        // Load local data first - using APP_ID prefixed keys
         const local = {
-            mistakes: JSON.parse(localStorage.getItem('mistakes') || '[]'),
-            archive: JSON.parse(localStorage.getItem('archive') || '[]'),
-            fav: JSON.parse(localStorage.getItem('fav') || '[]'),
-            settings: JSON.parse(localStorage.getItem('settings') || '{}'),
-            sessions: JSON.parse(localStorage.getItem('sessions') || '[]')
+            mistakes: JSON.parse(localStorage.getItem(getStorageKey('mistakes')) || '[]'),
+            archive: JSON.parse(localStorage.getItem(getStorageKey('archive')) || '[]'),
+            fav: JSON.parse(localStorage.getItem(getStorageKey('fav')) || '[]'),
+            settings: JSON.parse(localStorage.getItem(getStorageKey('settings')) || '{}'),
+            sessions: JSON.parse(localStorage.getItem(getStorageKey('sessions')) || '[]')
         };
         State.localData = local;
         
         // Sync with Firebase
         if (window.currentUser) {
             try {
-                const userRef = ref(db, 'user_progress/' + window.currentUser.uid);
+                const userRef = ref(db, 'user_progress/' + window.currentUser.uid + '/' + APP_ID);
                 const snapshot = await get(userRef);
                 const cloudData = snapshot.val();
                 
@@ -105,17 +104,17 @@ const Data = {
             last_updated: serverTimestamp()
         };
         
-        // LocalStorage
-        localStorage.setItem('mistakes', JSON.stringify(State.localData.mistakes));
-        localStorage.setItem('archive', JSON.stringify(State.localData.archive));
-        localStorage.setItem('fav', JSON.stringify(State.localData.fav));
-        localStorage.setItem('settings', JSON.stringify(State.localData.settings));
+        // LocalStorage - using APP_ID prefixed keys
+        localStorage.setItem(getStorageKey('mistakes'), JSON.stringify(State.localData.mistakes));
+        localStorage.setItem(getStorageKey('archive'), JSON.stringify(State.localData.archive));
+        localStorage.setItem(getStorageKey('fav'), JSON.stringify(State.localData.fav));
+        localStorage.setItem(getStorageKey('settings'), JSON.stringify(State.localData.settings));
         
-        // Firebase
+        // Firebase - also include APP_ID in path
         if (window.currentUser) {
             try {
-                await update(ref(db, 'user_progress/' + window.currentUser.uid), dataToSave);
-                console.log("💾 Saved to Firebase");
+                await update(ref(db, 'user_progress/' + window.currentUser.uid + '/' + APP_ID), dataToSave);
+                console.log("💾 Saved to Firebase for app:", APP_ID);
             } catch (e) {
                 console.log("⚠️ Firebase save failed:", e.message);
             }
@@ -134,6 +133,7 @@ const Data = {
             user_id: window.currentUser ? window.currentUser.uid : 'anonymous',
             telegram_id: State.user.telegram_id || 0,
             user_name: State.user.first_name,
+            app_id: APP_ID,
             timestamp: serverTimestamp(),
             mode: State.mode,
             term: State.sel.terms[0] || 'all',
@@ -161,23 +161,23 @@ const Data = {
         };
         
         try {
-            // Save to leaderboard
+            // Save to leaderboard (app-specific)
             if (State.sel.subj) {
                 const ctx = (State.sel.subj).replace(/[.#$/\[\]]/g, "_");
-                await set(ref(db, 'leaderboards/' + ctx + '/' + window.currentUser.uid), {
+                await set(ref(db, 'leaderboards/' + APP_ID + '/' + ctx + '/' + window.currentUser.uid), {
                     score: sessionData.score,
                     accuracy: sessionData.accuracy,
                     total: sessionData.total_questions,
                     name: State.user.first_name,
                     timestamp: sessionData.timestamp
                 });
-                console.log("🏆 Leaderboard updated");
+                console.log("🏆 Leaderboard updated for app:", APP_ID);
             }
             
-            // Save detailed analytics
-            const sessionKey = push(ref(db, 'analytics/sessions')).key;
-            await set(ref(db, 'analytics/sessions/' + sessionKey), sessionData);
-            console.log("✅ Analytics saved:", sessionKey);
+            // Save detailed analytics (app-specific)
+            const sessionKey = push(ref(db, 'analytics/' + APP_ID + '/sessions')).key;
+            await set(ref(db, 'analytics/' + APP_ID + '/sessions/' + sessionKey), sessionData);
+            console.log("✅ Analytics saved:", sessionKey, "for app:", APP_ID);
             
             await Data.updateUserStats(sessionData);
             
@@ -189,7 +189,7 @@ const Data = {
     updateUserStats: async (session) => {
         if (!window.currentUser) return;
         
-        const statsRef = ref(db, 'analytics/user_stats/' + window.currentUser.uid);
+        const statsRef = ref(db, 'analytics/' + APP_ID + '/user_stats/' + window.currentUser.uid);
         const snapshot = await get(statsRef);
         const current = snapshot.val() || {
             total_sessions: 0,
@@ -206,6 +206,7 @@ const Data = {
         current.last_active = session.timestamp;
         current.telegram_id = session.telegram_id;
         current.user_name = session.user_name;
+        current.app_id = APP_ID;
         
         // Subject breakdown
         session.answers.forEach(ans => {
@@ -234,7 +235,7 @@ const Data = {
         current.strong_areas = strongAreas;
         
         await set(statsRef, current);
-        console.log("👤 User stats updated");
+        console.log("👤 User stats updated for app:", APP_ID);
     },
 
     loadAnalytics: async () => {
@@ -244,11 +245,11 @@ const Data = {
             return;
         }
         
-        console.log("📈 Loading analytics...");
+        console.log("📈 Loading analytics for app:", APP_ID);
         try {
             const [sessionsSnap, usersSnap] = await Promise.all([
-                get(ref(db, 'analytics/sessions').limitToLast(100)),
-                get(ref(db, 'analytics/user_stats'))
+                get(ref(db, 'analytics/' + APP_ID + '/sessions').limitToLast(100)),
+                get(ref(db, 'analytics/' + APP_ID + '/user_stats'))
             ]);
             
             const sessions = sessionsSnap.val() || {};
@@ -301,6 +302,9 @@ const Data = {
             .slice(0, 5);
         
         container.innerHTML = `
+            <div style="margin-bottom:15px; padding:10px; background:rgba(0,0,0,0.05); border-radius:8px;">
+                <strong>App ID:</strong> ${APP_ID}
+            </div>
             <div class="stats-grid">
                 <div class="stat-item"><h3>المستخدمين</h3><p>${totalUsers}</p></div>
                 <div class="stat-item"><h3>الجلسات</h3><p>${totalSessions}</p></div>
@@ -329,7 +333,7 @@ const Data = {
     },
 
     exportAnalytics: () => {
-        get(ref(db, 'analytics')).then(snap => {
+        get(ref(db, 'analytics/' + APP_ID)).then(snap => {
             const data = snap.val();
             const dataStr = JSON.stringify(data, null, 2);
             
@@ -338,7 +342,7 @@ const Data = {
                 <div style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:99999;display:flex;justify-content:center;align-items:center;padding:20px;">
                     <div style="background:#fff;padding:20px;border-radius:10px;width:100%;max-width:600px;max-height:90vh;display:flex;flex-direction:column;gap:15px;">
                         <div style="display:flex;justify-content:space-between;align-items:center;">
-                            <h3 style="margin:0;color:#333">📊 Export Analytics</h3>
+                            <h3 style="margin:0;color:#333">📊 Export Analytics - ${APP_ID}</h3>
                             <button class="close-modal-btn" style="background:none;border:none;font-size:24px;cursor:pointer;">&times;</button>
                         </div>
                         <p style="margin:0;color:#666;font-size:14px;line-height:1.4;">
