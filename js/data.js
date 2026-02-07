@@ -367,60 +367,87 @@ window.addEventListener('beforeunload', () => {
 
 /**
  * MIGRATION: Move old per-device data to new per-user structure
- * Run this once, then remove
+ * Works for anonymous users - matches by telegram_id
  */
 migrateOldData: async () => {
-    if (!isAdmin()) {
-        console.log("❌ Admin only");
+    const myTelegramId = State.user.telegram_id || State.user.id;
+    
+    if (!myTelegramId || myTelegramId === 0) {
+        alert("❌ No Telegram ID found. Cannot migrate.");
         return;
     }
     
-    console.log("🔄 Starting migration...");
+    console.log("🔄 Starting migration for Telegram ID:", myTelegramId);
     
     try {
-        // Get all old per-device data
+        // Get all data
         const oldSnap = await get(ref(db, '/'));
-        const allData = oldSnap.val();
+        const allData = oldSnap.val() || {};
         
-        if (!allData) return;
+        const myOldRecords = [];
         
-        const migrations = [];
-        
-        // Find all keys that look like Firebase UIDs (20+ chars, mixed case)
+        // Find all records belonging to this Telegram ID
         Object.keys(allData).forEach(key => {
-            if (key.length > 20 && key !== 'users' && key !== 'auth_links' && key !== 'admins') {
-                const oldData = allData[key];
-                const telegramId = oldData.telegram_id;
-                
-                if (telegramId && telegramId !== 0) {
-                    console.log("📦 Migrating:", key, "→", telegramId);
-                    
-                    // Merge into new structure
-                    const newRef = ref(db, 'users/' + telegramId);
-                    migrations.push(
-                        get(newRef).then(snap => {
-                            const existing = snap.val() || {};
-                            const merged = {
-                                mistakes: [...new Set([...(existing.mistakes || []), ...(oldData.mistakes || [])])],
-                                archive: [...new Set([...(existing.archive || []), ...(oldData.archive || [])])],
-                                fav: [...new Set([...(existing.fav || []), ...(oldData.fav || [])])],
-                                settings: existing.settings || oldData.settings || {},
-                                telegram_id: telegramId,
-                                user_name: oldData.user_name || existing.user_name || 'Unknown',
-                                last_updated: Date.now(),
-                                migrated_from: key,
-                                app_id: oldData.app_id || APP_ID
-                            };
-                            return set(newRef, merged);
-                        })
-                    );
-                }
+            // Skip new structure keys
+            if (key === 'users' || key === 'auth_links' || key === 'admins' || key === 'analytics') return;
+            
+            const record = allData[key];
+            if (record.telegram_id === myTelegramId) {
+                myOldRecords.push({ key: key, data: record });
             }
         });
         
-        await Promise.all(migrations);
-        console.log("✅ Migration complete! Migrated", migrations.length, "records");
-        alert("Migration complete! Check console.");
+        if (myOldRecords.length === 0) {
+            console.log("✅ No old records found for this user");
+            alert("No old data to migrate. You're clean!");
+            return;
+        }
+        
+        console.log("Found", myOldRecords.length, "old records:", myOldRecords.map(r => r.key));
+        
+        // Merge all old data
+        const merged = {
+            mistakes: [],
+            archive: [],
+            fav: [],
+            settings: {},
+            telegram_id: myTelegramId,
+            user_name: State.user.first_name,
+            last_updated: Date.now(),
+            app_id: APP_ID,
+            migrated: true,
+            migrated_from: myOldRecords.map(r => r.key)
+        };
+        
+        myOldRecords.forEach(record => {
+            const d = record.data;
+            if (d.mistakes) merged.mistakes.push(...d.mistakes);
+            if (d.archive) merged.archive.push(...d.archive);
+            if (d.fav) merged.fav.push(...d.fav);
+            if (d.settings) merged.settings = { ...merged.settings, ...d.settings }; // Last wins
+        });
+        
+        // Deduplicate
+        merged.mistakes = [...new Set(merged.mistakes)];
+        merged.archive = [...new Set(merged.archive)];
+        merged.fav = [...new Set(merged.fav)];
+        
+        // Save to new structure
+        await set(ref(db, 'users/' + myTelegramId), merged);
+        
+        // Create auth link for this device
+        if (window.currentUser) {
+            await set(ref(db, 'auth_links/' + window.currentUser.uid), {
+                telegram_id: myTelegramId,
+                linked_at: serverTimestamp()
+            });
+        }
+        
+        console.log("✅ Migration complete!");
+        alert(`Migration complete! Merged ${myOldRecords.length} old records.`);
+        
+        // Refresh data
+        await Data.setupRealtimeSync();
         
     } catch (e) {
         console.error("❌ Migration failed:", e);
@@ -429,36 +456,48 @@ migrateOldData: async () => {
 },
 
 /**
- * CLEANUP: Remove old per-device data after migration
+ * CLEANUP: Delete only MY old per-device data after migration
  */
-cleanupOldData: async () => {
-    if (!isAdmin()) {
-        console.log("❌ Admin only");
+cleanupMyOldData: async () => {
+    const myTelegramId = State.user.telegram_id || State.user.id;
+    
+    if (!myTelegramId || myTelegramId === 0) {
+        alert("❌ No Telegram ID found.");
         return;
     }
     
-    if (!confirm("⚠️ This will DELETE all old per-device data! Make sure migration is complete. Continue?")) {
+    if (!confirm("⚠️ Delete your old per-device data? This cannot be undone.")) {
         return;
     }
     
     try {
         const oldSnap = await get(ref(db, '/'));
-        const allData = oldSnap.val();
+        const allData = oldSnap.val() || {};
         
         const deletions = [];
         
         Object.keys(allData).forEach(key => {
-            if (key.length > 20 && key !== 'users' && key !== 'auth_links' && key !== 'admins') {
-                console.log("🗑️ Deleting:", key);
+            // Skip structure keys
+            if (key === 'users' || key === 'auth_links' || key === 'admins' || key === 'analytics') return;
+            
+            const record = allData[key];
+            if (record.telegram_id === myTelegramId) {
+                console.log("🗑️ Deleting my old record:", key);
                 deletions.push(set(ref(db, key), null));
             }
         });
         
+        if (deletions.length === 0) {
+            alert("No old data found to clean up.");
+            return;
+        }
+        
         await Promise.all(deletions);
-        console.log("✅ Cleanup complete! Removed", deletions.length, "old records");
-        alert("Cleanup complete!");
+        console.log("✅ Cleaned up", deletions.length, "old records");
+        alert(`Cleaned up ${deletions.length} old records!`);
         
     } catch (e) {
         console.error("❌ Cleanup failed:", e);
+        alert("Cleanup failed: " + e.message);
     }
 }
