@@ -363,3 +363,102 @@ window.Data = Data;
 window.addEventListener('beforeunload', () => {
     Data.cleanup();
 });
+// Add to Data object in data.js
+
+/**
+ * MIGRATION: Move old per-device data to new per-user structure
+ * Run this once, then remove
+ */
+migrateOldData: async () => {
+    if (!isAdmin()) {
+        console.log("❌ Admin only");
+        return;
+    }
+    
+    console.log("🔄 Starting migration...");
+    
+    try {
+        // Get all old per-device data
+        const oldSnap = await get(ref(db, '/'));
+        const allData = oldSnap.val();
+        
+        if (!allData) return;
+        
+        const migrations = [];
+        
+        // Find all keys that look like Firebase UIDs (20+ chars, mixed case)
+        Object.keys(allData).forEach(key => {
+            if (key.length > 20 && key !== 'users' && key !== 'auth_links' && key !== 'admins') {
+                const oldData = allData[key];
+                const telegramId = oldData.telegram_id;
+                
+                if (telegramId && telegramId !== 0) {
+                    console.log("📦 Migrating:", key, "→", telegramId);
+                    
+                    // Merge into new structure
+                    const newRef = ref(db, 'users/' + telegramId);
+                    migrations.push(
+                        get(newRef).then(snap => {
+                            const existing = snap.val() || {};
+                            const merged = {
+                                mistakes: [...new Set([...(existing.mistakes || []), ...(oldData.mistakes || [])])],
+                                archive: [...new Set([...(existing.archive || []), ...(oldData.archive || [])])],
+                                fav: [...new Set([...(existing.fav || []), ...(oldData.fav || [])])],
+                                settings: existing.settings || oldData.settings || {},
+                                telegram_id: telegramId,
+                                user_name: oldData.user_name || existing.user_name || 'Unknown',
+                                last_updated: Date.now(),
+                                migrated_from: key,
+                                app_id: oldData.app_id || APP_ID
+                            };
+                            return set(newRef, merged);
+                        })
+                    );
+                }
+            }
+        });
+        
+        await Promise.all(migrations);
+        console.log("✅ Migration complete! Migrated", migrations.length, "records");
+        alert("Migration complete! Check console.");
+        
+    } catch (e) {
+        console.error("❌ Migration failed:", e);
+        alert("Migration failed: " + e.message);
+    }
+},
+
+/**
+ * CLEANUP: Remove old per-device data after migration
+ */
+cleanupOldData: async () => {
+    if (!isAdmin()) {
+        console.log("❌ Admin only");
+        return;
+    }
+    
+    if (!confirm("⚠️ This will DELETE all old per-device data! Make sure migration is complete. Continue?")) {
+        return;
+    }
+    
+    try {
+        const oldSnap = await get(ref(db, '/'));
+        const allData = oldSnap.val();
+        
+        const deletions = [];
+        
+        Object.keys(allData).forEach(key => {
+            if (key.length > 20 && key !== 'users' && key !== 'auth_links' && key !== 'admins') {
+                console.log("🗑️ Deleting:", key);
+                deletions.push(set(ref(db, key), null));
+            }
+        });
+        
+        await Promise.all(deletions);
+        console.log("✅ Cleanup complete! Removed", deletions.length, "old records");
+        alert("Cleanup complete!");
+        
+    } catch (e) {
+        console.error("❌ Cleanup failed:", e);
+    }
+}
