@@ -1,4 +1,4 @@
-// data.js - Automatic migration, no user action needed
+// data.js - Telegram ID only, no Firebase UID storage
 
 import { 
     app, auth, db, signInAnonymously, onAuthStateChanged, 
@@ -22,8 +22,8 @@ const Data = {
 
     showFirebaseUid: () => {
         if (window.currentUser) {
-            alert("🔥 Firebase UID:\n\n" + window.currentUser.uid + 
-                  "\n\n📱 Telegram ID:\n\n" + (State.user.telegram_id || 'N/A'));
+            alert("🔥 Firebase UID (for debug only):\n\n" + window.currentUser.uid + 
+                  "\n\n📱 Telegram ID (actual user ID):\n\n" + (State.user.telegram_id || 'N/A'));
         } else {
             alert("❌ لم يتم تسجيل الدخول بعد");
         }
@@ -58,21 +58,45 @@ const Data = {
         }
     },
     
+    // ALWAYS use Telegram ID, never Firebase UID for data storage
     getUserId: () => {
         const teleId = State.user.telegram_id || State.user.id;
-        if (teleId && teleId !== 0 && teleId !== 'anonymous') {
+        if (teleId && teleId !== 0) {
             return teleId.toString();
         }
-        return 'anonymous_' + (window.currentUser?.uid || 'guest');
+        // If somehow no Telegram ID, use Firebase UID temporarily but warn
+        console.warn("⚠️ No Telegram ID found, using Firebase UID temporarily");
+        return window.currentUser?.uid || null;
     },
     
     /**
-     * MAIN INIT - Auto-migration happens here
+     * MAIN INIT
      */
     initSync: async () => {
         console.log("🔄 Starting data sync... App ID:", APP_ID);
         
-        // 1. Load local data first
+        // Check if we have Telegram ID
+        const teleId = State.user.telegram_id || State.user.id;
+        if (!teleId || teleId === 0) {
+            console.log("⚠️ No Telegram ID - operating in local-only mode");
+            // Still load local data
+            const local = {
+                mistakes: JSON.parse(localStorage.getItem(getStorageKey('mistakes')) || '[]'),
+                archive: JSON.parse(localStorage.getItem(getStorageKey('archive')) || '[]'),
+                fav: JSON.parse(localStorage.getItem(getStorageKey('fav')) || '[]'),
+                settings: JSON.parse(localStorage.getItem(getStorageKey('settings')) || '{}'),
+                sessions: JSON.parse(localStorage.getItem(getStorageKey('sessions')) || '[]'),
+                last_sync: parseInt(localStorage.getItem(getStorageKey('last_sync')) || '0')
+            };
+            State.localData = local;
+            
+            if (State.localData.settings.theme && window.UI) {
+                UI.setTheme(State.localData.settings.theme);
+            }
+            return;
+        }
+        
+        // Load local data first
         const local = {
             mistakes: JSON.parse(localStorage.getItem(getStorageKey('mistakes')) || '[]'),
             archive: JSON.parse(localStorage.getItem(getStorageKey('archive')) || '[]'),
@@ -83,7 +107,7 @@ const Data = {
         };
         State.localData = local;
         
-        // Apply settings immediately
+        // Apply settings
         if (State.localData.settings.theme && window.UI) {
             UI.setTheme(State.localData.settings.theme);
         }
@@ -91,208 +115,154 @@ const Data = {
             UI.toggleAnim(false);
         }
         
-        // 2. AUTO-MIGRATION: Check and migrate old data silently
+        // Migrate old Firebase UID data to Telegram ID
         if (window.currentUser) {
-            await Data.autoMigrate();
+            await Data.migrateFromUidToTelegramId();
         }
         
-        // 3. Setup real-time sync
+        // Setup sync
         if (window.currentUser) {
             await Data.setupRealtimeSync();
         }
         
-        // 4. Setup connectivity monitoring
         Data.setupConnectivityMonitoring();
         
-        console.log("🔍 User:", Data.getUserId(), "| Role:", window.userRole, "| App:", APP_ID);
+        console.log("🔍 Telegram ID:", Data.getUserId(), "| Role:", window.userRole);
     },
     
     /**
-     * AUTO-MIGRATION: Runs silently on startup
-     * Finds old per-device data and merges into new structure
+     * MIGRATE: Move data from old Firebase UID path to Telegram ID path
      */
-    autoMigrate: async () => {
-        const myTelegramId = State.user.telegram_id || State.user.id;
+    migrateFromUidToTelegramId: async () => {
+        const teleId = State.user.telegram_id || State.user.id;
+        if (!teleId || teleId === 0) return;
         
-        // Skip if no Telegram ID or already migrated this session
-        if (!myTelegramId || myTelegramId === 0 || Data.migrationDone) {
-            return;
-        }
+        const userId = teleId.toString();
+        const firebaseUid = window.currentUser?.uid;
         
-        const userId = myTelegramId.toString();
+        if (!firebaseUid) return;
         
         try {
-            console.log("🔍 Checking for old data to migrate...");
+            // Check if Telegram ID path already has data
+            const teleRef = ref(db, 'users/' + userId);
+            const teleSnap = await get(teleRef);
             
-            // Check if already migrated (new structure exists)
-            const newDataSnap = await get(ref(db, 'users/' + userId));
-            if (newDataSnap.exists()) {
-                console.log("✅ New structure already exists, skipping migration");
+            if (teleSnap.exists()) {
+                console.log("✅ Telegram ID path already exists, no migration needed");
                 Data.migrationDone = true;
-                
-                // Still create auth link for this device
-                await set(ref(db, 'auth_links/' + window.currentUser.uid), {
-                    telegram_id: myTelegramId,
-                    linked_at: serverTimestamp()
-                });
                 return;
             }
             
-            // Get all data to find old records
-            const rootSnap = await get(ref(db, '/'));
-            const allData = rootSnap.val() || {};
+            // Check if old Firebase UID path has data
+            const uidRef = ref(db, firebaseUid); // Old flat structure
+            const uidSnap = await get(uidRef);
             
-            const myOldRecords = [];
-            
-            // Find all old Firebase UID records for this Telegram ID
-            Object.keys(allData).forEach(key => {
-                // Skip new structure keys
-                if (['users', 'auth_links', 'admins', 'analytics', 'leaderboards', 'presence'].includes(key)) {
-                    return;
-                }
+            if (uidSnap.exists()) {
+                const oldData = uidSnap.val();
+                console.log("🔄 Migrating from Firebase UID to Telegram ID:", oldData);
                 
-                // Skip if not a Firebase UID (long random string)
-                if (key.length < 20) return;
-                
-                const record = allData[key];
-                if (record && record.telegram_id === myTelegramId) {
-                    myOldRecords.push({ key: key, data: record });
-                }
-            });
-            
-            if (myOldRecords.length === 0) {
-                console.log("ℹ️ No old data found, creating fresh record");
-                
-                // Create new record with current local data
-                const freshData = {
-                    mistakes: State.localData.mistakes || [],
-                    archive: State.localData.archive || [],
-                    fav: State.localData.fav || [],
-                    settings: State.localData.settings || {},
-                    telegram_id: myTelegramId,
-                    user_name: State.user.first_name,
+                // Migrate to new path
+                const migratedData = {
+                    mistakes: oldData.mistakes || [],
+                    archive: oldData.archive || [],
+                    fav: oldData.fav || [],
+                    settings: oldData.settings || {},
+                    telegram_id: teleId,
+                    user_name: State.user.first_name || oldData.user_name || "User",
                     last_updated: serverTimestamp(),
                     client_timestamp: Date.now(),
                     app_id: APP_ID,
-                    created_fresh: true
+                    migrated_from_uid: firebaseUid
                 };
                 
-                await set(ref(db, 'users/' + userId), freshData);
+                await set(teleRef, migratedData);
+                console.log("✅ Migrated to Telegram ID path");
                 
-            } else {
-                console.log("🔄 Migrating", myOldRecords.length, "old records:", myOldRecords.map(r => r.key));
+                // Delete old path
+                await set(uidRef, null);
+                console.log("🗑️ Deleted old Firebase UID path");
                 
-                // Merge all old data
-                const merged = {
-                    mistakes: [...(State.localData.mistakes || [])],
-                    archive: [...(State.localData.archive || [])],
-                    fav: [...(State.localData.fav || [])],
-                    settings: { ...(State.localData.settings || {}) },
-                    telegram_id: myTelegramId,
-                    user_name: State.user.first_name,
-                    last_updated: serverTimestamp(),
-                    client_timestamp: Date.now(),
-                    app_id: APP_ID,
-                    auto_migrated: true,
-                    migrated_from: myOldRecords.map(r => r.key),
-                    migration_count: myOldRecords.length
-                };
-                
-                // Add all old data
-                myOldRecords.forEach(record => {
-                    const d = record.data;
-                    if (d.mistakes) merged.mistakes.push(...d.mistakes);
-                    if (d.archive) merged.archive.push(...d.archive);
-                    if (d.fav) merged.fav.push(...d.fav);
-                    if (d.settings) merged.settings = { ...merged.settings, ...d.settings };
-                });
-                
-                // Deduplicate
-                merged.mistakes = [...new Set(merged.mistakes)];
-                merged.archive = [...new Set(merged.archive)];
-                merged.fav = [...new Set(merged.fav)];
-                
-                // Save to new structure
-                await set(ref(db, 'users/' + userId), merged);
-                
-                console.log("✅ Migration complete! Merged:", {
-                    mistakes: merged.mistakes.length,
-                    archive: merged.archive.length,
-                    fav: merged.fav.length
-                });
-                
-                // Update local with merged data
-                State.localData.mistakes = merged.mistakes;
-                State.localData.archive = merged.archive;
-                State.localData.fav = merged.fav;
-                State.localData.settings = merged.settings;
+                // Update local data
+                State.localData.mistakes = migratedData.mistakes;
+                State.localData.archive = migratedData.archive;
+                State.localData.fav = migratedData.fav;
+                State.localData.settings = migratedData.settings;
                 Data.saveLocalOnly();
                 
                 if(window.UI && window.UI.updateHomeStats) {
                     UI.updateHomeStats();
                 }
+            } else {
+                // No old data found, check if there are other old entries with this telegram_id
+                const rootSnap = await get(ref(db, '/'));
+                const allData = rootSnap.val() || {};
+                
+                let foundOldData = null;
+                let foundKey = null;
+                
+                Object.keys(allData).forEach(key => {
+                    // Skip known new structure keys
+                    if (['users', 'auth_links', 'admins', 'analytics', 'leaderboards', 'presence'].includes(key)) {
+                        return;
+                    }
+                    
+                    const record = allData[key];
+                    if (record && record.telegram_id === teleId) {
+                        foundOldData = record;
+                        foundKey = key;
+                    }
+                });
+                
+                if (foundOldData && foundKey) {
+                    console.log("🔄 Found old data at key:", foundKey);
+                    
+                    const migratedData = {
+                        mistakes: foundOldData.mistakes || [],
+                        archive: foundOldData.archive || [],
+                        fav: foundOldData.fav || [],
+                        settings: foundOldData.settings || {},
+                        telegram_id: teleId,
+                        user_name: State.user.first_name || foundOldData.user_name || "User",
+                        last_updated: serverTimestamp(),
+                        client_timestamp: Date.now(),
+                        app_id: APP_ID,
+                        migrated_from: foundKey
+                    };
+                    
+                    await set(teleRef, migratedData);
+                    await set(ref(db, foundKey), null);
+                    
+                    console.log("✅ Migrated and cleaned up old key");
+                    
+                    State.localData.mistakes = migratedData.mistakes;
+                    State.localData.archive = migratedData.archive;
+                    State.localData.fav = migratedData.fav;
+                    State.localData.settings = migratedData.settings;
+                    Data.saveLocalOnly();
+                } else {
+                    console.log("ℹ️ No old data to migrate, creating fresh record");
+                }
             }
-            
-            // Create auth link for this device
-            await set(ref(db, 'auth_links/' + window.currentUser.uid), {
-                telegram_id: myTelegramId,
-                linked_at: serverTimestamp()
-            });
             
             Data.migrationDone = true;
             
         } catch (e) {
-            console.error("⚠️ Auto-migration failed:", e);
-            // Don't block app startup - continue with local data
-        }
-    },
-    
-    /**
-     * Optional: Cleanup old data after migration (runs silently later)
-     */
-    cleanupOldDataSilent: async () => {
-        const myTelegramId = State.user.telegram_id || State.user.id;
-        if (!myTelegramId || myTelegramId === 0) return;
-        
-        try {
-            const rootSnap = await get(ref(db, '/'));
-            const allData = rootSnap.val() || {};
-            
-            const deletions = [];
-            
-            Object.keys(allData).forEach(key => {
-                if (['users', 'auth_links', 'admins', 'analytics', 'leaderboards', 'presence'].includes(key)) {
-                    return;
-                }
-                if (key.length < 20) return;
-                
-                const record = allData[key];
-                if (record && record.telegram_id === myTelegramId) {
-                    deletions.push(set(ref(db, key), null));
-                }
-            });
-            
-            if (deletions.length > 0) {
-                await Promise.all(deletions);
-                console.log("🗑️ Cleaned up", deletions.length, "old records");
-            }
-            
-        } catch (e) {
-            console.log("⚠️ Cleanup failed (non-critical):", e.message);
+            console.error("⚠️ Migration failed:", e);
         }
     },
     
     setupRealtimeSync: async () => {
         const userId = Data.getUserId();
         
-        if (userId.startsWith('anonymous_')) {
-            console.log("⚠️ No Telegram ID, operating in local-only mode");
+        // Don't sync if no valid Telegram ID
+        if (!userId || userId === 'null') {
+            console.log("⚠️ No valid user ID, skipping cloud sync");
             return;
         }
         
         const userRef = ref(db, 'users/' + userId);
         
-        console.log("📡 Setting up real-time sync for:", userId);
+        console.log("📡 Setting up real-time sync for Telegram ID:", userId);
         
         if (Data.listeners.userData) {
             off(Data.listeners.userData.ref, 'value', Data.listeners.userData.callback);
@@ -302,7 +272,12 @@ const Data = {
             const cloudData = snapshot.val();
             
             if (!cloudData) {
-                console.log("☁️ No cloud data yet");
+                console.log("☁️ No cloud data yet for this user");
+                // Push local data to cloud if we have local data
+                if (State.localData.archive.length > 0 || State.localData.mistakes.length > 0) {
+                    console.log("📤 Pushing local data to cloud...");
+                    Data.saveData();
+                }
                 return;
             }
             
@@ -310,7 +285,8 @@ const Data = {
             const localTime = State.localData.last_updated || 
                              parseInt(localStorage.getItem(getStorageKey('last_sync')) || '0');
             
-            if (cloudTime > localTime) {
+            // Merge cloud data with local (cloud wins for arrays, local wins for settings)
+            if (cloudTime > localTime || cloudTime === localTime) {
                 console.log("⬇️ Updating from cloud...");
                 
                 State.localData = {
@@ -328,6 +304,9 @@ const Data = {
                 }
                 
                 Data.showSyncIndicator();
+            } else {
+                console.log("📤 Local is newer, pushing to cloud...");
+                Data.saveData();
             }
         };
         
@@ -387,62 +366,70 @@ const Data = {
         return [...new Set([...local, ...cloud])];
     },
 
+    // ============================================
+    // FIXED saveData - Telegram ID ONLY
+    // ============================================
     saveData: async (options = {}) => {
-        const userId = Data.getUserId();
-    
-        // Always save locally first
+        const teleId = State.user.telegram_id || State.user.id;
+        
+        // ALWAYS save locally first
         Data.saveLocalOnly();
-    
-        // If no Telegram ID, operate in local-only mode
-        if (userId.startsWith('anonymous_')) {
-            console.log("💾 Local-only mode (no Telegram ID)");
+        
+        // Only sync if we have Telegram ID
+        if (!teleId || teleId === 0) {
+            console.log("⚠️ No Telegram ID, skipping cloud sync");
             return;
         }
-    
-        // Prepare data for Firebase - MUST include telegram_id to satisfy rules
+        
+        const userId = teleId.toString();
+        
+        // Prepare data - telegram_id MUST match the path key
         const dataToSave = {
             mistakes: State.localData.mistakes || [],
             archive: State.localData.archive || [],
             fav: State.localData.fav || [],
-            telegram_id: State.user.telegram_id || State.user.id, // CRITICAL: Must match path
-            user_name: State.user.first_name || "Anonymous",
+            telegram_id: teleId, // This MUST equal userId (the path key)
+            user_name: State.user.first_name || "User",
             last_updated: serverTimestamp(),
             client_timestamp: Date.now(),
             app_id: APP_ID
-            // NOTE: Settings are intentionally excluded - keep per-app
+            // Settings are per-device, don't sync
         };
-    
-        // Check online status and auth
+        
+        // Check Firebase auth
         if (!window.currentUser) {
             console.log("⚠️ No Firebase auth, queuing for later");
             Data.queueForSync(dataToSave);
             return;
         }
-    
+        
+        // Check online
         if (!Data.isOnline) {
             console.log("📴 Offline, queuing for later");
             Data.queueForSync(dataToSave);
             return;
         }
-    
-        try {
-            // Use SET not UPDATE for atomic write with validation
-            // This ensures all fields are present for .validate rules
-            await set(ref(db, 'users/' + userId), dataToSave);
-            console.log("✅ Saved to Firebase for user:", userId);
         
-            // Clear from sync queue if successful
+        try {
+            // Use SET to ensure atomic write with all required fields
+            await set(ref(db, 'users/' + userId), dataToSave);
+            console.log("✅ Saved to Firebase for Telegram ID:", userId);
+            
+            // Clear from queue
             Data.syncQueue = Data.syncQueue.filter(item => 
-                item.data.telegram_id !== dataToSave.telegram_id
+                item.data.telegram_id !== teleId
             );
             localStorage.setItem(getStorageKey('sync_queue'), JSON.stringify(Data.syncQueue));
-        
+            
         } catch (e) {
             console.error("❌ Firebase save failed:", e.message);
-            // Check if it's a permission denied error
+            
             if (e.message.includes('permission_denied') || e.code === 'PERMISSION_DENIED') {
-                console.error("🔒 Permission denied - check rules and auth state");
+                console.error("🔒 Permission denied - check Firebase Rules");
+                console.error("Path: users/" + userId);
+                console.error("Data telegram_id:", dataToSave.telegram_id);
             }
+            
             Data.queueForSync(dataToSave);
         }
     },
@@ -475,14 +462,15 @@ const Data = {
         const queue = JSON.parse(localStorage.getItem(getStorageKey('sync_queue')) || '[]');
         if (queue.length === 0) return;
         
-        const userId = Data.getUserId();
-        if (userId.startsWith('anonymous_')) return;
+        const teleId = State.user.telegram_id || State.user.id;
+        if (!teleId || teleId === 0) return;
         
+        const userId = teleId.toString();
         const successful = [];
         
         for (const item of queue) {
             try {
-                await update(ref(db, 'users/' + userId), {
+                await set(ref(db, 'users/' + userId), {
                     ...item.data,
                     last_updated: serverTimestamp()
                 });
@@ -497,23 +485,17 @@ const Data = {
         localStorage.setItem(getStorageKey('sync_queue'), JSON.stringify(Data.syncQueue));
     },
 
-    /**
-     * Manual migration trigger (for debugging)
-     */
     forceMigrate: async () => {
         Data.migrationDone = false;
-        await Data.autoMigrate();
+        await Data.migrateFromUidToTelegramId();
     },
     
-    /**
-     * Check migration status
-     */
     getMigrationStatus: () => {
-        const userId = Data.getUserId();
+        const teleId = State.user.telegram_id || State.user.id;
         return {
-            telegramId: userId,
+            telegramId: teleId,
             migrationDone: Data.migrationDone,
-            isAnonymous: userId.startsWith('anonymous_')
+            hasFirebaseAuth: !!window.currentUser
         };
     },
 
@@ -526,35 +508,45 @@ const Data = {
 
 window.Data = Data;
 
-// Add this to window.Data for debugging
+// ============================================
+// DEBUG FUNCTION
+// ============================================
 Data.debugAuth = async () => {
     console.log("=== DEBUG AUTH STATE ===");
-    console.log("Current User:", window.currentUser);
-    console.log("Auth UID:", window.currentUser?.uid);
     console.log("Telegram ID:", State.user.telegram_id);
     console.log("Computed UserId:", Data.getUserId());
+    console.log("Firebase Auth:", window.currentUser ? "✅ Yes" : "❌ No");
+    console.log("Firebase UID (auth only):", window.currentUser?.uid);
     console.log("Is Online:", Data.isOnline);
-    console.log("State.localData:", State.localData);
+    console.log("Local Data:", {
+        mistakes: State.localData.mistakes.length,
+        archive: State.localData.archive.length,
+        fav: State.localData.fav.length
+    });
     
-    // Test write permission
-    if (window.currentUser) {
-        const testRef = ref(db, 'users/' + Data.getUserId());
+    const teleId = State.user.telegram_id || State.user.id;
+    if (teleId && window.currentUser) {
+        const testRef = ref(db, 'users/' + teleId);
         try {
-            await get(testRef);
-            console.log("✅ Read permission OK");
+            const snap = await get(testRef);
+            console.log("Cloud data exists:", snap.exists() ? "✅ Yes" : "❌ No");
+            if (snap.exists()) {
+                console.log("Cloud data:", snap.val());
+            }
         } catch (e) {
             console.error("❌ Read failed:", e.message);
         }
         
         try {
             await set(testRef, {
-                telegram_id: State.user.telegram_id,
+                telegram_id: teleId,
+                user_name: State.user.first_name || "Test",
                 last_updated: serverTimestamp(),
                 test: true
             });
-            console.log("✅ Write permission OK");
-            // Clean up test data
-            await set(testRef, null);
+            console.log("✅ Write test passed");
+            // Cleanup
+            await update(testRef, { test: null });
         } catch (e) {
             console.error("❌ Write failed:", e.message);
         }
