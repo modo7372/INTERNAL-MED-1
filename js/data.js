@@ -389,35 +389,60 @@ const Data = {
 
     saveData: async (options = {}) => {
         const userId = Data.getUserId();
-        
+    
+        // Always save locally first
+        Data.saveLocalOnly();
+    
+        // If no Telegram ID, operate in local-only mode
         if (userId.startsWith('anonymous_')) {
-            Data.saveLocalOnly();
+            console.log("💾 Local-only mode (no Telegram ID)");
             return;
         }
-        
+    
+        // Prepare data for Firebase - MUST include telegram_id to satisfy rules
         const dataToSave = {
             mistakes: State.localData.mistakes || [],
             archive: State.localData.archive || [],
             fav: State.localData.fav || [],
-            // settings EXCLUDED - keep per-app
-            telegram_id: State.user.telegram_id || State.user.id,
-            user_name: State.user.first_name,
+            telegram_id: State.user.telegram_id || State.user.id, // CRITICAL: Must match path
+            user_name: State.user.first_name || "Anonymous",
             last_updated: serverTimestamp(),
             client_timestamp: Date.now(),
             app_id: APP_ID
+            // NOTE: Settings are intentionally excluded - keep per-app
         };
+    
+        // Check online status and auth
+        if (!window.currentUser) {
+            console.log("⚠️ No Firebase auth, queuing for later");
+            Data.queueForSync(dataToSave);
+            return;
+        }
+    
+        if (!Data.isOnline) {
+            console.log("📴 Offline, queuing for later");
+            Data.queueForSync(dataToSave);
+            return;
+        }
+    
+        try {
+            // Use SET not UPDATE for atomic write with validation
+            // This ensures all fields are present for .validate rules
+            await set(ref(db, 'users/' + userId), dataToSave);
+            console.log("✅ Saved to Firebase for user:", userId);
         
-        Data.saveLocalOnly();
+            // Clear from sync queue if successful
+            Data.syncQueue = Data.syncQueue.filter(item => 
+                item.data.telegram_id !== dataToSave.telegram_id
+            );
+            localStorage.setItem(getStorageKey('sync_queue'), JSON.stringify(Data.syncQueue));
         
-        if (window.currentUser && Data.isOnline && !options.localOnly) {
-            try {
-                await update(ref(db, 'users/' + userId), dataToSave);
-                console.log("💾 Saved to Firebase for user:", userId);
-            } catch (e) {
-                console.log("⚠️ Firebase save failed:", e.message);
-                Data.queueForSync(dataToSave);
+        } catch (e) {
+            console.error("❌ Firebase save failed:", e.message);
+            // Check if it's a permission denied error
+            if (e.message.includes('permission_denied') || e.code === 'PERMISSION_DENIED') {
+                console.error("🔒 Permission denied - check rules and auth state");
             }
-        } else if (!Data.isOnline) {
             Data.queueForSync(dataToSave);
         }
     },
@@ -500,6 +525,42 @@ const Data = {
 };
 
 window.Data = Data;
+
+// Add this to window.Data for debugging
+Data.debugAuth = async () => {
+    console.log("=== DEBUG AUTH STATE ===");
+    console.log("Current User:", window.currentUser);
+    console.log("Auth UID:", window.currentUser?.uid);
+    console.log("Telegram ID:", State.user.telegram_id);
+    console.log("Computed UserId:", Data.getUserId());
+    console.log("Is Online:", Data.isOnline);
+    console.log("State.localData:", State.localData);
+    
+    // Test write permission
+    if (window.currentUser) {
+        const testRef = ref(db, 'users/' + Data.getUserId());
+        try {
+            await get(testRef);
+            console.log("✅ Read permission OK");
+        } catch (e) {
+            console.error("❌ Read failed:", e.message);
+        }
+        
+        try {
+            await set(testRef, {
+                telegram_id: State.user.telegram_id,
+                last_updated: serverTimestamp(),
+                test: true
+            });
+            console.log("✅ Write permission OK");
+            // Clean up test data
+            await set(testRef, null);
+        } catch (e) {
+            console.error("❌ Write failed:", e.message);
+        }
+    }
+    console.log("========================");
+};
 
 window.addEventListener('beforeunload', () => {
     Data.cleanup();
